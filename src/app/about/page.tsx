@@ -2,6 +2,7 @@
 
 import { db } from "@/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import Image from "next/image";
 import { useEffect } from "react";
 
 import portfolioData from "@/utils/portfolioData";
@@ -9,7 +10,6 @@ import Chip from "@/components/Chip";
 import TabsSelectView from "@/components/TabsSelectView";
 import ExperienceSection from "@/components/ExperienceSection";
 import EducationSection from "@/components/EducationSection";
-import BlogComponent from "@/components/BlogComponent";
 
 const tabData = [
   {
@@ -20,23 +20,25 @@ const tabData = [
   { label: "Certifications", content: <div>Settings content here</div> },
 ];
 
-export default function Home() {
-  useEffect(() => {
-    const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(db, "test"));
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, doc.data());
-      });
-    };
+export default function About() {
 
-    fetchData();
-  }, []);
+  //  useEffect(() => {
+  //   const fetchData = async () => {
+  //     const querySnapshot = await getDocs(collection(db, "test"));
+  //     querySnapshot.forEach((doc) => {
+  //       console.log(doc.id, doc.data());
+  //     });
+  //   };
 
-  return (
+  //   fetchData();
+  // }, []);
+
+
+ return (
     <main className="p-4 w-100%">
-      <div className="flex w-100% h-auto justify-center mb-16">
-        <div className="flex max-w-370 justify-center h-auto  w-fit">
-          <div className="w-4/6 h-auto">
+      <div className="flex bg-amber-300 w-100% h-auto justify-center">
+        <div className="flex max-w-370 justify-center h-auto bg-cyan-500 w-fit">
+          <div className="w-4/6 bg-blue-100 h-auto">
             <h1> Hi, I'm Jeswyn Jas!</h1>
 
             {portfolioData.profileIntro
@@ -45,7 +47,7 @@ export default function Home() {
                 line === "" ? <br key={i} /> : <p key={i}>{line}</p>
               )}
           </div>
-          <div className="flex w-2/6 h-100 justify-center items-center">
+          <div className="flex w-2/6 bg-blue-200 h-100 justify-center items-center">
             <img
               src="/profile.png"
               alt="Profile"
@@ -54,18 +56,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex  w-100% h-auto justify-center">
-        <div className="max-w-370 w-full h-auto ">
-          <div><h2>Latest Blog</h2></div>
-         {portfolioData.blog.map((item, idx) => (
-    <BlogComponent
-      key={item.id ?? idx}
-      title={item.title}
-      intro={item.intro}
-      image = {item.image}
-    />
-  ))}
-
+      <div className="flex bg-pink-100 w-100% h-auto justify-center">
+        <div className="max-w-370 w- h-400 bg-green-300">
+          <TabsSelectView tabs={tabData} />
         </div>
       </div>
     </main>
