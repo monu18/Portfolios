@@ -47,9 +47,9 @@ export default function Home() {
       <div className="flex w-100% h-auto justify-center">
         <div className="max-w-370 w-full h-auto ">
           <div>
-            <h2>Latest Blog</h2>
+            <h2>Latest Blogs</h2>
           </div>
-          {portfolioData.blog.map((item, idx) => (
+          {portfolioData.blogs.map((item, idx) => (
             <BlogComponent
               key={item.id ?? idx}
               title={item.title}

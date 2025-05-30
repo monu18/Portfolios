@@ -6,6 +6,11 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
+/** Optional if you want static generation */
+export function generateStaticParams() {
+  return portfolioData.blogMetaData.map(({ slug }) => ({ slug }));
+}
+
 export default async function BlogPost({ params }: PageProps) {
   const { slug } = await params;
   const post = portfolioData.blogMetaData.find(p => p.slug === slug);
@@ -20,7 +25,3 @@ export default async function BlogPost({ params }: PageProps) {
   );
 }
 
-/** Optional if you want static generation */
-export function generateStaticParams() {
-  return portfolioData.blogMetaData.map(({ slug }) => ({ slug }));
-}

@@ -6,9 +6,14 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export default async function BlogPost({ params }: PageProps) {
+/** Optional if you want static generation */
+export function generateStaticParams() {
+  return portfolioData.projectMetaData.map(({ slug }) => ({ slug }));
+}
+
+export default async function ProjectDetails({ params }: PageProps) {
   const { slug } = await params;
-  const post = portfolioData.blogMetaData.find(p => p.slug === slug);
+  const post = portfolioData.projectMetaData.find(p => p.slug === slug);
   if (!post) return notFound();
 
   return (
@@ -20,7 +25,3 @@ export default async function BlogPost({ params }: PageProps) {
   );
 }
 
-/** Optional if you want static generation */
-export function generateStaticParams() {
-  return portfolioData.blogMetaData.map(({ slug }) => ({ slug }));
-}
