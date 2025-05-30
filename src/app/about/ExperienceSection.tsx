@@ -2,18 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  max-width: 800px;
+  padding-top: 1rem;
+  max-width: max-w-370;
   margin: 0 auto;
-  font-family: 'Arial', sans-serif;
 `;
 
 const Header = styled.h2`
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
+
 `;
 
 const Job = styled.div`
@@ -28,29 +23,29 @@ const JobHeader = styled.div`
 `;
 
 const Company = styled.h3`
-  font-size: 1.25rem;
   margin: 0;
   color: #222;
 `;
 
-const Role = styled.span`
-  font-weight: 600;
-  color: #555;
-`;
+// const Role = styled.span`
+//   font-weight: 600;
+//   color: #555;
+// `;
 
 const Meta = styled.div`
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #777;
 `;
 
 const List = styled.ul`
-  margin-top: 0.5rem;
-  padding-left: 1rem;
+  margin-top: .5rem;
+  padding-left: 2rem;
 `;
 
 const ListItem = styled.li`
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size:large;
 `;
 
 export default function ExperienceSection() {
@@ -77,8 +72,8 @@ export default function ExperienceSection() {
         <List>
           <ListItem>Designed and deployed automated payment ETL pipelines in Python to integrate 12+ data sources, streamlining operations across Taiwan and Japan, saving 400+ annual operational hours, and uncovering fee corrections generating $60K in additional revenue.</ListItem>
           <ListItem>Led a team of 3 analysts in roadmap prioritization and conducted A/B testing on incentive campaigns using exploratory analysis and statistical modeling, driving market expansion and revamping city launch strategies.</ListItem>
-          <ListItem>Spearheaded KPI tracking model using SQL & Python to monitor lead-to-driver funnel conversion, streamlining onboarding processes and contributing to a $1.2B+ revenue pipeline critical for Uber's growth.</ListItem>
-          <ListItem>Collaborated with cross-functional teams to launch a Market Intelligence Dashboard in Data Studio, supporting competitive benchmarking and industry analysis of Uber's top competitors in the US and Canada.</ListItem>
+          <ListItem>Spearheaded KPI tracking model using SQL & Python to monitor lead-to-driver funnel conversion, streamlining onboarding processes and contributing to a $1.2B+ revenue pipeline critical for Uber&apos;s growth.</ListItem>
+          <ListItem>Collaborated with cross-functional teams to launch a Market Intelligence Dashboard in Data Studio, supporting competitive benchmarking and industry analysis of Uber&apos;s top competitors in the US and Canada.</ListItem>
         </List>
       </Job>
 

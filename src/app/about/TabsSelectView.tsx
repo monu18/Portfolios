@@ -1,31 +1,36 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 
-/**
- * TabsSelectView: A simple tabs component with three tabs.
- * Props:
- * - tabs: array of { label: string, content: ReactNode }
- */
-export default function TabsSelectView({ tabs }) {
+
+type Tab = {
+  label: string;
+  content: ReactNode;
+};
+
+type TabsSelectViewProps = {
+  tabs: Tab[];
+};
+
+export default function TabsSelectView({ tabs }:TabsSelectViewProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="w-full">
-      <div className="inline-flex border border-gray-300 rounded-t-md overflow-hidden">
+    <div className="max-w-370 h-400 w-full">
+      <div className="inline-flex border-2 border-black-600 rounded-t overflow-hidden">
         {tabs.map((tab, idx) => (
           <button
             key={idx}
             onClick={() => setActiveIndex(idx)}
-            className={`px-4 py-2 text-l font-semibold focus:outline-none transition ` +
+            className={`px-4 py-2 text-xl focus:outline-none transition ` +
               (activeIndex === idx
-                ? 'bg-white text-gray-900 border-b-2 border-transparent'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200')
+                ? 'bg-gray-100 text-black border-b-2 font-semibold'
+                : 'bg-white text-black hover:bg-green-50')
             }
           >
             {tab.label}
           </button>
         ))}
       </div>
-      <div className="border border-t-0 border-gray-300 rounded-b-md p-4">
+      <div className='border border-1 border-gray-50 p-8'>
         {tabs[activeIndex] && tabs[activeIndex].content}
       </div>
     </div>

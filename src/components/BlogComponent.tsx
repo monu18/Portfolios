@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const BlogComponent = ({ title, intro, image }) => {
+const BlogComponent = ({ title, intro, image }:{title:string;intro:string;image:string;}) => {
 
 
   return (

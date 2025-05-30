@@ -2,7 +2,7 @@
 
 import { db } from "@/firebase";
 import { collection, getDocs } from "firebase/firestore";
-import Image from "next/image";
+// import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Other() {

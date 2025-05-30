@@ -5,20 +5,10 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
 
 import portfolioData from "@/utils/portfolioData";
-import Chip from "@/components/Chip";
-import TabsSelectView from "@/components/TabsSelectView";
-import ExperienceSection from "@/components/ExperienceSection";
-import EducationSection from "@/components/EducationSection";
+// import Chip from "@/components/Chip";
+// import TabsSelectView from "@/app/about/TabsSelectView";
 import BlogComponent from "@/components/BlogComponent";
 
-const tabData = [
-  {
-    label: "Experience",
-    content: <ExperienceSection></ExperienceSection>,
-  },
-  { label: "Education", content: <EducationSection></EducationSection> },
-  { label: "Certifications", content: <div>Settings content here</div> },
-];
 
 export default function Home() {
   useEffect(() => {
@@ -37,7 +27,7 @@ export default function Home() {
       <div className="flex w-100% h-auto justify-center mb-16">
         <div className="flex max-w-370 justify-center h-auto  w-fit">
           <div className="w-4/6 h-auto">
-            <h1> Hi, I'm Jeswyn Jas!</h1>
+            <h1> Hi, I&apos;m Jeswyn Jas!</h1>
 
             {portfolioData.profileIntro
               .split("\n")
@@ -54,18 +44,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex  w-100% h-auto justify-center">
+      <div className="flex w-100% h-auto justify-center">
         <div className="max-w-370 w-full h-auto ">
-          <div><h2>Latest Blog</h2></div>
-         {portfolioData.blog.map((item, idx) => (
-    <BlogComponent
-      key={item.id ?? idx}
-      title={item.title}
-      intro={item.intro}
-      image = {item.image}
-    />
-  ))}
-
+          <div>
+            <h2>Latest Blog</h2>
+          </div>
+          {portfolioData.blog.map((item, idx) => (
+            <BlogComponent
+              key={item.id ?? idx}
+              title={item.title}
+              intro={item.intro}
+              image={item.image}
+            />
+          ))}
         </div>
       </div>
     </main>
