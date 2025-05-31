@@ -13,23 +13,28 @@ const BlogComponent = ({
   url: string;
 }) => {
   return (
-    <div className=" w-full min-h-60 flex justify-around mb-4 border-b border-gray-200 pb-4">
-      <div className="h-auto w-6/8">
-        <div className="h-12  w-full">
-          <h3>{title}</h3>
-        </div>
-
-        <p>{intro} </p>
-        <Link
-          href={`/project/${url}`}
-          className="text-blue-500 font-bold underline"
-        >
-          <p>Read more...</p>
-        </Link>
+    <div className="flex flex-col md:flex-row w-full min-h-60 justify-between mb-4 border-b border-gray-200 pb-4">
+      {/* thumbnail */}
+      <div className="order-1 md:order-2 w-full md:w-2/6 flex justify-center mb-6 md:mb-0">
+        <img
+          src={image}
+          alt={`${title} thumbnail`}
+          className="w-60 h-60 object-cover"
+        />
       </div>
 
-      <div className="h-auto  w-2/8 flex justify-center min-w-60">
-        <img src={image} alt="Profile" className="w-60 h-60 object-cover" />
+      {/* copy */}
+      <div className="order-2 md:order-1 w-full md:w-4/6 px-2">
+        <h3 className="text-xl font-semibold mb-2 line-clamp-2">{title}</h3>
+
+        <p className="mb-3">{intro}</p>
+
+        <Link
+          href={`/project/${url}`}
+          className="text-blue-600 font-bold underline"
+        >
+          Read more…
+        </Link>
       </div>
     </div>
   );

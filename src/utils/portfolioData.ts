@@ -18,8 +18,8 @@ const portfolioData = {
       title: "Building a Retrieval-Ready Policy NLP Pipeline",
       slug: "retrieval-ready-rolicy-nlp",
       intro:
-        "In an age where data-driven decision-making is paramount, the ability to retrieve and analyze policy documents with context-sensitive precision is a game changer. In this post, we delve into building a Retrieval-Ready Policy NLP pipeline tailored for U.S. Name, Image, and Likeness (NIL) laws—leveraging spaCy, Latent Dirichlet Allocation (LDA), Principal Component Analysis (PCA), OpenAI embeddings, and large language models (LLMs). We’ll explore end-to-end design, from raw text ingestion through topic modeling and vector storage, culminating in a Retrieval-Augmented Generation (RAG) prototype that achieves 0.92 Recall@5 when querying NCAA player-week data.",
-      image: "blog_1.png",
+        "The Retrieval-Ready Policy NLP project is an advanced natural language processing (NLP) initiative developed to efficiently extract, analyze, and utilize U.S. Name, Image, and Likeness (NIL) laws within collegiate athletics. Leveraging cutting-edge NLP techniques and embedding models, this project creates an end-to-end pipeline that enhances the contextual retrieval capabilities of a retrieval-augmented generation (RAG) system. The final implementation achieved a high precision recall of 0.92 (Recall@5), effectively demonstrating robust information retrieval.",
+      image: "project_1.jpeg",
     },
     {
       id: 2,
@@ -27,24 +27,24 @@ const portfolioData = {
         "Predictive Success Modeling with XGBoost and Nested Cross-Validation",
       slug: "predictive-success-modeling",
       intro:
-        "Predicting outcomes is at the heart of modern analytics. Whether you’re forecasting sales, churn rates, or student performance, robust predictive models can drive strategic decision-making. In this deep dive, we explore how to build a predictive success model—specifically targeting candidate performance on standardized assessments—using Python, XGBoost, scikit-learn, pandas, and statsmodels. We’ll cover data ingestion, feature engineering, nested cross-validation for unbiased performance estimation, hyperparameter tuning, and model interpretation.",
-      image: "blog_2.png",
+        "The Predictive Success Modeling project focuses on developing a robust machine learning model designed to accurately forecast candidate performance outcomes on standardized assessments. Leveraging advanced regression techniques and rigorous evaluation protocols, this predictive model serves as a powerful tool for educational institutions and talent acquisition teams, helping them make informed decisions and optimize candidate selections.",
+      image: "project_2.jpeg",
     },
     {
       id: 3,
       title: "Sentiment Sphere—Real-Time Social Media Sentiment Analysis",
       slug: "sentiment-sphere-real-time-sentiment-analysis",
       intro:
-        "In an era where opinions form and propagate at lightning speed across social media, real-time sentiment analysis has become indispensable for brand monitoring, crisis management, and market research. This post outlines the design and implementation of Sentiment Sphere—an end-to-end pipeline harnessing Python, BeautifulSoup, NLTK’s VADER, and API integrations to collect, process, and analyze social media chatter, even tackling informal language and sarcasm.",
-      image: "blog_3.png",
+        "Sentiment Sphere is an innovative real-time sentiment analysis solution designed to capture and interpret emotional expressions from social media platforms instantly. Using advanced natural language processing (NLP) tools, this pipeline effectively addresses challenges posed by informal language, slang, emojis, and sarcasm commonly found on platforms like Twitter, Reddit, and Facebook. This comprehensive solution provides valuable insights into public opinion and sentiment trends, significantly aiding marketing, customer relations, and crisis management efforts.",
+      image: "project_3.jpeg",
     },
     {
       id: 4,
       title: "Engineering a Distributed LLM Preprocessing Pipeline on AWS EMR",
       slug: "llm-preprocessing-pipeline",
       intro:
-        "Preprocessing days-long volumes of raw text—tokenizing, filtering, and preparing for downstream LLM training—demands scalable, distributed architectures. In this post, we explore how to build an end-to-end LLM preprocessing pipeline using Hadoop, Spark, MapReduce, AWS EMR, and Deeplearning4j—processing over 5 GB of mixed-format corpora in under two hours.",
-      image: "blog_4.png",
+        "The LLM Preprocessing Pipeline project was developed to efficiently preprocess large-scale textual datasets for training advanced large language models (LLMs). By leveraging distributed computing frameworks such as Hadoop and Apache Spark within Amazon Web Services' Elastic MapReduce (AWS EMR) environment, this pipeline significantly enhanced preprocessing speed and NLP task readiness. The implementation involved generating neural embeddings through JTokkit and Deeplearning4j, achieving a remarkable 40% reduction in data preprocessing time.",
+      image: "project_4.jpeg",
     },
   ],
 
