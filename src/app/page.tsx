@@ -47,7 +47,7 @@ export default function Home() {
       <div className="flex w-100% h-auto justify-center">
         <div className="max-w-370 w-full h-auto ">
           <div>
-            <h2>Latest Blogs</h2>
+            <h2>Latest Projects</h2>
           </div>
           {portfolioData.blogs.map((item, idx) => (
             <BlogComponent
@@ -55,6 +55,7 @@ export default function Home() {
               title={item.title}
               intro={item.intro}
               image={item.image}
+              url={item.slug}
             />
           ))}
         </div>

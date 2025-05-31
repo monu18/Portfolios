@@ -18,7 +18,7 @@ export default async function BlogPost({ params }: PageProps) {
 
   return (
     <article className="prose mx-auto max-w-3xl py-10">
-      <h1>{post.title}</h1>
+      {/* <h1>{post.title}</h1> */}
       <p className="text-sm text-gray-500">{post.date}</p>
       <Markdown>{post.content}</Markdown>
     </article>

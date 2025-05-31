@@ -1,17 +1,31 @@
+import Link from "next/link";
 import React from "react";
 
-
-const BlogComponent = ({ title, intro, image }:{title:string;intro:string;image:string;}) => {
-
-
+const BlogComponent = ({
+  title,
+  intro,
+  image,
+  url,
+}: {
+  title: string;
+  intro: string;
+  image: string;
+  url: string;
+}) => {
   return (
     <div className=" w-full min-h-60 flex justify-around mb-4 border-b border-gray-200 pb-4">
       <div className="h-auto w-6/8">
-        <div className="h-12  w-full"><h3>{title}</h3></div>
+        <div className="h-12  w-full">
+          <h3>{title}</h3>
+        </div>
 
         <p>{intro} </p>
-        <p className="text-blue-500 font-bold underline">Read more...</p>
-        
+        <Link
+          href={`/project/${url}`}
+          className="text-blue-500 font-bold underline"
+        >
+          <p>Read more...</p>
+        </Link>
       </div>
 
       <div className="h-auto  w-2/8 flex justify-center min-w-60">
