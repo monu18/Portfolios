@@ -96,7 +96,7 @@ export default function Home() {
       <div className="w-full max-w-370">
         <h2 className="text-2xl font-semibold mb-6">Latest Projects</h2>
 
-        {portfolioData.blogs.map((item, idx) => (
+        {portfolioData.projectsMetaData.map((item, idx) => (
           <BlogComponent
             key={item.id ?? idx}
             title={item.title}
