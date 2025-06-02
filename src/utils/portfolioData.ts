@@ -10,7 +10,7 @@ const portfolioData = {
     "https://drive.google.com/file/d/1Kg24FxGxioK0r_jFNg5HLyKbHMFe51jx/view?usp=sharing",
 
   profileIntro:
-    "My path into data engineering has always been guided by a single conviction: when high-quality data flows friction-free, organizations unlock outcomes that ripple far beyond their dashboards. Today, I carry that conviction from code reviews to production deploys.\n\nAt UnitedHealth Group’s Optum division, I architected real-time pipelines that power Provider Data Commons—an enterprise directory trusted by millions of physicians and patients. I designed streaming components on AWS EMR, Lambda, and Kafka that cut data-refresh latency from hours to minutes, then automated CI/CD with Jenkins so every merge ships clean, tested, and monitored. Those pipelines now process billions of records and have saved the business hundreds of manual hours while slashing downtime incidents.\nnImpact doesn’t stop at ingestion. I migrated critical workloads from Cassandra to AWS-native services, hardening reliability and trimming cloud spend, and led batch-ingestion redesigns that fed Spark aggregations into Amazon RDS at 4× previous throughput. For taking ownership end-to-end—from shell-script POCs to Grafana dashboards—I earned Optum’s Bravo awards and top-quartile performance ratings three years running.\n\nSince Optum, I’ve doubled down on hands-on engineering through projects such as a gradient-boosted model predicting coronary-artery disease, an OS-level scheduler overhaul in PintOS, and a 16-bit processor synthesized onto a Xilinx FPGA. These experiences reinforced my belief that clean design, ruthless testing, and empathetic collaboration are the true force multipliers.\n\nNow, while completing my M.S. in Computer Science at the University at Buffalo, I’m eager to channel fresh research into production-grade systems. If you’re building data platforms that must scale with integrity—architectures where every table, topic, and test drives measurable human value—let’s connect. I’m ready to help turn your next big idea into resilient, cloud-native reality.",
+    "My path into data engineering has always been guided by a single conviction: when high-quality data flows friction-free, organizations unlock outcomes that ripple far beyond their dashboards. Today, I carry that conviction from code reviews to production deploys.\n\nAt UnitedHealth Group’s Optum division, I architected real-time pipelines that power Provider Data Commons—an enterprise directory trusted by millions of physicians and patients. I designed streaming components on AWS EMR, Lambda, and Kafka that cut data-refresh latency from hours to minutes, then automated CI/CD with Jenkins so every merge ships clean, tested, and monitored. Those pipelines now process billions of records and have saved the business hundreds of manual hours while slashing downtime incidents.\n\nImpact doesn’t stop at ingestion. I migrated critical workloads from Cassandra to AWS-native services, hardening reliability and trimming cloud spend, and led batch-ingestion redesigns that fed Spark aggregations into Amazon RDS at 4× previous throughput. For taking ownership end-to-end—from shell-script POCs to Grafana dashboards—I earned Optum’s Bravo awards and top-quartile performance ratings three years running.\n\nSince Optum, I’ve doubled down on hands-on engineering through projects such as a gradient-boosted model predicting coronary-artery disease, an OS-level scheduler overhaul in PintOS, and a 16-bit processor synthesized onto a Xilinx FPGA. These experiences reinforced my belief that clean design, ruthless testing, and empathetic collaboration are the true force multipliers.\n\nNow, while completing my M.S. in Computer Science at the University at Buffalo, I’m eager to channel fresh research into production-grade systems. If you’re building data platforms that must scale with integrity—architectures where every table, topic, and test drives measurable human value—let’s connect. I’m ready to help turn your next big idea into resilient, cloud-native reality.",
 
   projectsMetaData: [
     {
@@ -802,6 +802,7 @@ The synergy of Vector Databases and Large Language Models offers vast potential 
   projectMetaData: [
     {
       id: 1,
+      image: "project_1.jpeg",
       slug: "Building-a-Robust-PintOS-Thread-Scheduler",
       title: "Building a Robust PintOS Thread Scheduler",
       date: "2025-05-01",
@@ -1365,6 +1366,7 @@ With these enhancements, PintOS transforms from a basic round-robin scheduler in
     },
     {
       id: 2,
+      image: "project_2.jpeg",
       slug: "Implementing-User-Program-Execution-and-System-Call-Support-in-PintOS",
       title: "Implementing User Program Execution and System Call Support in PintOS",
       date: "2025-04-19",
@@ -1930,282 +1932,1375 @@ With these mechanisms, PintOS can successfully run simple C user programs, handl
     },
     {
       id: 3,
-      slug: "sentiment-sphere-real-time-sentiment-analysis",
-      title: "Sentiment Sphere: Real-Time Sentiment Analysis",
+      image: "project_3.jpeg",
+      slug: "Designing-a-16-Bit-Single-Cycle-Processor-in-Verilog",
+      title: "Designing a 16-Bit Single-Cycle Processor in Verilog",
       date: "2025-04-19",
       excerpt:
-        "Sentiment Sphere is an innovative real-time sentiment analysis solution designed to capture and interpret emotional expressions from social media platforms instantly. Using advanced natural language processing (NLP) tools, this pipeline effectively addresses challenges posed by informal language, slang, emojis, and sarcasm commonly found on platforms like Twitter, Reddit, and Facebook. This comprehensive solution provides valuable insights into public opinion and sentiment trends, significantly aiding marketing, customer relations, and crisis management efforts.",
-      content: `# Sentiment Sphere: Real-Time Sentiment Analysis
+        "In this project, I designed and implemented a single-cycle, non-pipelined 16-bit processor capable of executing basic arithmetic, logical, memory, and control-flow instructions. Each instruction completes in exactly one clock cycle, and the processor adheres strictly to a 16-bit word size. The goal was to build a simple yet fully functional CPU that can fetch, decode, execute, and write back results for instructions such as ADD, SUB, SLL, AND, LW, SW, BEQ, BNE, and JMP. By using Verilog alongside Vivado for simulation and synthesis, I was able to verify correctness in software and deploy the design on an FPGA.",
+      content: `# Designing a 16-Bit Single-Cycle Processor in Verilog
 
-**Tech Stack:** Python, NLTK, VADER, BeautifulSoup, APIs
+## Introduction
 
----
+This project implements a non-pipelined, single-cycle 16-bit processor that supports a basic instruction set, including arithmetic, logical, memory, and control-flow instructions. Each instruction completes in exactly one clock cycle.
 
-## Project Overview
+### Main Objectives
 
-**Sentiment Sphere** is an innovative real-time sentiment analysis solution designed to capture and interpret emotional expressions from social media platforms instantly. Using advanced natural language processing (NLP) tools, this pipeline effectively addresses challenges posed by informal language, slang, emojis, and sarcasm commonly found on platforms like Twitter, Reddit, and Facebook. This comprehensive solution provides valuable insights into public opinion and sentiment trends, significantly aiding marketing, customer relations, and crisis management efforts.
+1. **Fetch, Decode, Execute, Write Back**
+   - Fetch a 16-bit instruction from memory
+   - Decode its opcode and fields
+   - Execute the operation in the ALU
+   - Write results back to registers or memory
 
----
+2. **Instruction Set Support**
+   - **R-Type**: ADD, SUB, SLL, AND
+   - **I-Type**: ADDI, LW, SW, BEQ, BNE
+   - **J-Type**: JMP
 
-## Motivation
+3. **16-Bit Datapath**
+   - All registers, ALU operands, and immediates are 16 bits wide
+   - Little-endian storage in both instruction and data memory
 
-In today's fast-paced digital environment, rapidly understanding public sentiment can provide significant competitive advantages. Social media platforms generate vast amounts of informal, nuanced, and often sarcastic content daily, complicating traditional sentiment analysis methods. **Sentiment Sphere** was conceptualized to bridge this gap by accurately interpreting complex emotional expressions in real-time, enabling businesses and analysts to swiftly react to changing public opinions and sentiments.
-
----
-
-## Technical Details
-
-### Data Collection via Web Scraping and APIs
-
-#### BeautifulSoup for Web Scraping
-
-To gather real-time data from various social media platforms, the project implemented web scraping techniques using Python's BeautifulSoup library. BeautifulSoup was selected due to its efficiency and ease of use in parsing HTML and XML documents.
-
-* **Scraping Process**: Automated scripts were developed to systematically fetch and parse data from platforms such as Twitter and Reddit.
-* **HTML Parsing**: BeautifulSoup efficiently extracted text data from structured web pages and handled dynamic content updates.
-
-#### API Integration
-
-Additionally, robust APIs provided by platforms like Twitter (Twitter API v2) were integrated into the pipeline for structured and reliable data extraction, facilitating rapid and real-time sentiment updates.
+The processor was implemented using Verilog and tested with Vivado for simulation, synthesis, and generating a bitstream for the Basys 3 FPGA.
 
 ---
 
-## Preprocessing and Text Normalization
+## Processor Features
 
-Effective sentiment analysis necessitated comprehensive text preprocessing using Python and NLTK:
+### Single-Cycle Architecture
+Every instruction (fetch → decode → execute → memory/access → write-back) completes in one clock cycle. This simplifies the control logic at the expense of a lower maximum clock frequency.
 
-* **Tokenization**: Dividing raw text into tokens (words, punctuation, emojis).
-* **Stopword Removal**: Filtering out irrelevant words (e.g., "the," "is," "at") to streamline analysis.
-* **Normalization**: Standardizing informal language, abbreviations, and internet slang for improved accuracy.
+### Non-Pipelined Execution
+No overlapping of instruction stages. If a hazard is detected (data or control), the processor stalls for exactly one clock cycle.
 
----
+### 16-Bit Word Size
+- Register values, ALU operations, and immediate fields are all exactly 16 bits
+- Memory accesses operate on either 8-bit bytes or 16-bit words
 
-## Sentiment Analysis with VADER
+### Basic Instruction Set
 
-### Introduction to VADER
+#### R-Type Instructions (opcode = \`4'b0000\`)
+- \`ADD  rd, rs1, rs2\` - Add two registers
+- \`SUB  rd, rs1, rs2\` - Subtract two registers
+- \`AND  rd, rs1, rs2\` - Bitwise AND
+- \`SLL  rd, rs1, rs2\` - Shift left logical by rs2[3:0]
 
-The Valence Aware Dictionary and sEntiment Reasoner (VADER) from NLTK was chosen for its effectiveness in handling social media texts. VADER excels in identifying nuanced sentiments, informal language, slang, emoticons, and emojis, making it ideal for social media sentiment analysis.
+#### I-Type Instructions
+- \`ADDI rd, rs1, imm4\` - Add 4-bit immediate
+- \`LW   rd, offset(rs1)\` - Load word from memory
+- \`SW   rs2, offset(rs1)\` - Store word to memory
+- \`BEQ  rs1, rs2, offset\` - Branch if equal
+- \`BNE  rs1, rs2, offset\` - Branch if not equal
 
-### Implementation and Usage
-
-* **Polarity Scores**: VADER assigns sentiment scores indicating positive, negative, neutral, and compound sentiment intensity.
-* **Real-time Analysis**: Integrated into the pipeline, VADER continuously processes streaming data, providing instantaneous sentiment insights.
-
-### Handling Sarcasm and Informality
-
-A significant advantage of VADER is its capability to recognize nuances like sarcasm and colloquial expressions through context-aware dictionaries and rules-based sentiment evaluation.
-
----
-
-## Pipeline Architecture
-
-The end-to-end pipeline was structured around several core processes:
-
-### 1. Data Acquisition
-
-* Automated scraping and API requests fetched continuous streams of social media content.
-
-### 2. Preprocessing and Cleaning
-
-* Parsed and cleaned text data, handling informalities and preparing data for sentiment evaluation.
-
-### 3. Sentiment Analysis
-
-* VADER analyzed textual data, generating actionable sentiment metrics.
-
-### 4. Real-Time Insights
-
-* Analyzed sentiments were immediately visualized and presented through dashboards for quick, actionable interpretation.
+#### J-Type Instructions
+- \`JMP  target\` - Unconditional jump
 
 ---
 
-## Real-Time Dashboard
+## Datapath & Control Overview
 
-A custom-built dashboard provided stakeholders with immediate visual feedback on sentiment trends:
+The high-level datapath architecture shows how the Program Counter, Instruction Memory, Control Unit, Register File, Sign-Extend unit, ALU, Data Memory, and multiplexers interconnect:
 
-* **Dynamic Visualization**: Real-time graphs, heatmaps, and sentiment distribution charts.
-* **Trend Analysis**: Historical sentiment tracking and predictive sentiment insights based on historical patterns.
-* **Custom Alerts**: Configurable alerts for immediate notification of critical sentiment shifts.
+\`\`\`
+                        +----------------+
+                        |  Program Count |---+
+                        |    (PC)        |   |
+                        +----------------+   v
+                                  |       [Address]
+                                  v
+                        +----------------+
+                        | Instruction    |  (fetch 16-bit instr)
+                        |   Memory       |--+
+                        +----------------+  |
+                                            v
+                       (16-bit instruction) 
+                                            |
+                                            v
+                                  +----------------+
+                                  |   Control      |--+ --> ALU_op
+                                  |   Unit         |   +--> RegWrite
+                                  +----------------+   +--> MemRead/Write
+                                            |          +--> Branch / Jmp
+                          [opcode, funct]  v          +--> ALUSrc / MemToReg
+                                  +----------------+
+                                  |  Register File |-- rs1_data
+                                  +----------------+-- rs2_data
+                                  |  Sign-Extend   |-- imm16
+                                  +----------------+
+                                            |
+                                            v
+                                  +----------------+
+                                  |      ALU       |-- alu_result
+                                  +----------------+-- zero_flag
+                                            |
+                        +----------------+  |         +----------------+
+                        |   Data Memory  |<---------+ |  Mux (Mem/ALU)|
+                        +----------------+  |         +----------------+
+                                            v
+                                    [mem_read_data]
+                                            |
+                              +-------------------------+
+                              |   Write-back to RegFile |
+                              +-------------------------+
+\`\`\`
+
+### Key Components
+- **PC → Instruction Memory**: The PC provides a byte address; two consecutive bytes form one 16-bit instruction
+- **Control Unit**: Decodes opcode and function bits to generate control signals
+- **Register File**: Reads rs1 and rs2 values; rd and write_data are governed by RegWrite
+- **Sign-Extend**: Extends a 4-bit immediate to 16 bits (preserving sign)
+- **ALU**: Performs arithmetic and logical operations, and sets zero_flag for branches
+- **Data Memory**: Reads or writes bytes/words based on control signals
+- **Multiplexers**: Route data between ALU inputs and write-back paths
 
 ---
 
-## Technical Challenges and Solutions
+## Module Implementations
 
-Key challenges encountered and successfully addressed included:
+### 1. Program Counter (\`program_counter.v\`)
 
-* **Data Volume and Velocity**: Efficient data handling strategies using optimized scraping schedules and API rate management ensured seamless performance.
-* **Noise in Social Media Text**: Comprehensive preprocessing and advanced normalization techniques significantly improved sentiment detection accuracy.
-* **Sarcasm and Complex Sentiments**: Advanced usage of VADER, alongside rule-based enhancements, enabled nuanced sentiment identification.
+The Program Counter (PC) is a 16-bit register that tracks the address of the next instruction.
+
+#### Features
+1. **Reset** (\`rst\`) → PC ← 0
+2. **Jump** (\`Jmp\`) → PC ← new_address (16-bit target)
+3. **Branch** (\`Branch && zero_flag\`) → PC ← branch_address
+4. **Increment** → PC ← PC + 2 (since each 16-bit instruction is 2 bytes)
+
+\`\`\`verilog
+// program_counter.v
+module program_counter (
+    input           clk,
+    input           rst,
+    input           Jmp,
+    input           Branch,
+    input  [15:0]   new_address,
+    input  [15:0]   branch_address,
+    input           zero_flag,
+    output reg [15:0] pc_out
+);
+
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            pc_out <= 16'b0;                    // Reset to 0
+        end else if (Jmp) begin
+            pc_out <= new_address;              // Unconditional jump
+        end else if (Branch && zero_flag) begin
+            pc_out <= branch_address;           // Conditional branch
+        end else begin
+            pc_out <= pc_out + 16'd2;           // Next instruction
+        end
+    end
+
+endmodule
+\`\`\`
+
+### 2. Instruction Memory (\`instruction_memory.v\`)
+
+Instruction Memory is a byte-addressable array (mem) of size 64K × 8 bits. Each 16-bit instruction is stored in two consecutive bytes in little-endian order.
+
+\`\`\`verilog
+// instruction_memory.v
+module instruction_memory (
+    input  [15:0]   address,     // Byte address from PC
+    output reg [15:0] instruction
+);
+
+    // 64K × 8‐bit memory
+    reg [7:0] mem [0:65535];
+
+    initial begin
+        // Initialize the first ~1000 bytes (example program)
+        mem[0]   = 8'h10; // low byte of instruction at address 0
+        mem[1]   = 8'h02; // high byte
+        mem[2]   = 8'h11; // instruction at address 2 low byte
+        mem[3]   = 8'h02; // high byte
+        // … Continue for all instructions …
+    end
+
+    always @(*) begin
+        // Combine two bytes (little-endian) into one 16-bit instruction
+        instruction = { mem[address + 1], mem[address] };
+    end
+
+endmodule
+\`\`\`
+
+### 3. Control Unit (\`control_unit.v\`)
+
+The Control Unit inspects the fetched instruction's opcode (bits [15:12]) and function field (bits [3:0]) to generate all control signals.
+
+#### Control Signals
+- **ALU_op [3:0]**: Tells the ALU which operation to perform
+- **RegWrite**: Enables writing to the Register File
+- **MemRead/MemWrite**: Control Data Memory reads/writes
+- **Branch**: Indicates a conditional branch (BEQ or BNE)
+- **Jmp**: Indicates an unconditional jump
+- **ALUSrc**: Selects between register operand and immediate for ALU B input
+- **MemToReg**: Selects whether write-back data comes from ALU or Data Memory
+
+\`\`\`verilog
+// control_unit.v
+module control_unit (
+    input  [15:0]   instruction,
+    input           zero_flag,
+    output reg [3:0] ALU_op,
+    output reg      RegWrite,
+    output reg      MemRead,
+    output reg      MemWrite,
+    output reg      Branch,
+    output reg      Jmp,
+    output reg      ALUSrc,
+    output reg      MemToReg
+);
+
+    wire [3:0] opcode = instruction[15:12];
+    wire [3:0] funct  = instruction[3:0]; // For R-type
+
+    always @(*) begin
+        // Default control signals (NOP)
+        ALU_op   = 4'b0000;
+        RegWrite = 1'b0;
+        MemRead  = 1'b0;
+        MemWrite = 1'b0;
+        Branch   = 1'b0;
+        Jmp      = 1'b0;
+        ALUSrc   = 1'b0;
+        MemToReg = 1'b0;
+
+        case (opcode)
+            4'b0000: begin  // R-type
+                case (funct)
+                    4'b0000: ALU_op = 4'b0010; // ADD
+                    4'b0001: ALU_op = 4'b0110; // SUB
+                    4'b0010: ALU_op = 4'b1000; // AND
+                    4'b0011: ALU_op = 4'b0001; // SLL
+                    default: ALU_op = 4'b0000; // NOP
+                endcase
+                RegWrite = 1'b1;
+            end
+
+            4'b1000: begin  // LW
+                ALU_op   = 4'b0010; // ADD (address calculation)
+                ALUSrc   = 1'b1;    // Immediate as second operand
+                MemRead  = 1'b1;    // Read from memory
+                RegWrite = 1'b1;    // Write back to register
+                MemToReg = 1'b1;    // Data comes from memory
+            end
+
+            4'b1001: begin  // SW
+                ALU_op   = 4'b0010; // ADD (address calculation)
+                ALUSrc   = 1'b1;    // Immediate
+                MemWrite = 1'b1;    // Write to memory
+            end
+
+            4'b1010: begin  // BEQ
+                ALU_op = 4'b0110;   // SUB (compare)
+                Branch = 1'b1;      // Conditional branch
+            end
+
+            4'b1011: begin  // BNE
+                ALU_op = 4'b0110;   // SUB (compare)
+                Branch = 1'b1;      // Conditional branch
+            end
+
+            4'b1100: begin  // ADDI
+                ALU_op   = 4'b0010; // ADD (immediate)
+                ALUSrc   = 1'b1;
+                RegWrite = 1'b1;    // Write back result
+            end
+
+            4'b1101: begin  // JMP
+                Jmp = 1'b1;         // Unconditional jump
+            end
+
+            default: begin
+                // Other opcodes = NOP
+            end
+        endcase
+    end
+
+endmodule
+\`\`\`
+
+### 4. Register File (\`register_file.v\`)
+
+The Register File contains 16 registers (R0–R15), each 16 bits wide.
+
+#### Features
+- **Read Ports (asynchronous)**: \`rs1_data = regfile[rs1]\`, \`rs2_data = regfile[rs2]\`
+- **Write Port (synchronous)**: If \`RegWrite = 1\`, then \`regfile[rd] <= write_data\`
+- **Memory Load**: If \`MemRead = 1\`, then \`regfile[rd] <= mem_data\`
+
+\`\`\`verilog
+// register_file.v
+module register_file (
+    input            clk,
+    input            rst,
+    input      [3:0] rs1,       // Source register 1
+    input      [3:0] rs2,       // Source register 2
+    input      [3:0] rd,        // Destination register
+    input     [15:0] write_data,
+    input            RegWrite, 
+    input            MemRead,   // Load from memory
+    input     [15:0] mem_data,  
+    output    [15:0] rs1_data,
+    output    [15:0] rs2_data
+);
+
+    reg [15:0] regfile [0:15];  // 16 registers × 16 bits
+
+    // Asynchronous reads:
+    assign rs1_data = regfile[rs1];
+    assign rs2_data = regfile[rs2];
+
+    // Synchronous write:
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            integer i;
+            for (i = 0; i < 16; i = i + 1) begin
+                regfile[i] <= 16'b0;
+            end
+        end else if (RegWrite) begin
+            regfile[rd] <= write_data;
+        end else if (MemRead) begin
+            regfile[rd] <= mem_data;
+        end
+    end
+
+endmodule
+\`\`\`
+
+### 5. Sign-Extend Unit (\`sign_extend.v\`)
+
+The Sign-Extend unit takes a 4-bit immediate and extends it to 16 bits by replicating the sign bit.
+
+\`\`\`verilog
+// sign_extend.v
+module sign_extend (
+    input  [3:0]   imm4,
+    output [15:0]  imm16
+);
+    assign imm16 = { {12{imm4[3]}}, imm4 };
+    // If imm4[3]=1, copies 1 twelve times; else copies 0.
+endmodule
+\`\`\`
+
+#### Examples
+- \`imm4 = 4'b1111\` → \`imm16 = 16'b1111111111111111\` (–1 in two's complement)
+- \`imm4 = 4'b0010\` → \`imm16 = 16'b0000000000000010\` (+2)
+
+### 6. Arithmetic Logic Unit (\`alu.v\`)
+
+The ALU performs arithmetic and logical operations on two 16-bit operands.
+
+#### Inputs/Outputs
+- **Inputs**: \`A[15:0]\`, \`B[15:0]\`, \`ALU_op[3:0]\`
+- **Outputs**: \`alu_result[15:0]\`, \`zero_flag\`
+
+\`\`\`verilog
+// alu.v
+module alu (
+    input      [15:0] A,
+    input      [15:0] B,
+    input      [3:0]  ALU_op,
+    output reg [15:0] alu_result,
+    output           zero_flag
+);
+
+    always @(*) begin
+        case (ALU_op)
+            4'b0010: alu_result = A + B;            // ADD / ADDI / LW / SW  
+            4'b0110: alu_result = A - B;            // SUB / BEQ / BNE compare  
+            4'b1000: alu_result = A & B;            // AND  
+            4'b0001: alu_result = A << B[3:0];      // SLL (shift left logical)  
+            default: alu_result = 16'b0;            // NOP or undefined
+        endcase
+    end
+
+    assign zero_flag = (alu_result == 16'b0) ? 1'b1 : 1'b0;
+
+endmodule
+\`\`\`
+
+#### Branch Address Calculation
+\`\`\`verilog
+branch_address = pc_out + 16'd2 + (imm16 << 1);
+\`\`\`
+
+### 7. Data Memory (\`data_memory.v\`)
+
+Data Memory is a 64K × 8-bit array that supports byte and word operations.
+
+#### Control Signals
+- **mem_read**: When high, \`read_data\` is driven by memory contents
+- **mem_write**: When high, \`write_data\` is stored into memory
+- **byte_enable**: Selects byte vs. word access
+
+\`\`\`verilog
+// data_memory.v
+module data_memory (
+    input           clk,
+    input           rst,
+    input           mem_read,
+    input           mem_write,
+    input           byte_enable,
+    input      [15:0] address,    // Byte address
+    input      [15:0] write_data, // Data to write
+    output reg [15:0] read_data
+);
+
+    reg [7:0] mem [0:65535];  // 64K × 8 bits
+    integer i;
+
+    // Write logic (synchronous)
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            for (i = 0; i < 65536; i = i + 1) begin
+                mem[i] <= 8'h00;
+            end
+        end else if (mem_write) begin
+            if (byte_enable) begin
+                mem[address] <= write_data[7:0];
+            end else begin
+                // Word write, little-endian
+                mem[address]     <= write_data[7:0];
+                mem[address + 1] <= write_data[15:8];
+            end
+        end
+    end
+
+    // Read logic (combinational)
+    always @(*) begin
+        if (mem_read) begin
+            if (byte_enable) begin
+                // Zero-extend 8-bit value to 16 bits
+                read_data = { 8'h00, mem[address] };
+            end else begin
+                // Word read (two bytes, little-endian)
+                read_data = { mem[address + 1], mem[address] };
+            end
+        end else begin
+            read_data = 16'b0;
+        end
+    end
+
+endmodule
+\`\`\`
+
+### 8. Multiplexer (\`mux_2to1.v\`)
+
+A simple 2-to-1 multiplexer used for ALU input selection and write-back data selection.
+
+\`\`\`verilog
+// mux_2to1.v
+module mux_2to1 (
+    input  [15:0] in0,
+    input  [15:0] in1,
+    input         sel,
+    output [15:0] out
+);
+
+    assign out = (sel) ? in1 : in0;
+
+endmodule
+\`\`\`
+
+#### Usage
+1. **ALU Input MUX** (\`ALUSrc\`): Chooses between \`rs2_data\` (register) and \`imm16\` (sign-extended immediate)
+2. **Write-Back MUX** (\`MemToReg\`): Chooses between \`alu_result\` and \`mem_read_data\`
 
 ---
 
-## Results and Impact
+## Testing and Verification
 
-The **Sentiment Sphere** project significantly enhanced sentiment analysis capabilities by:
+### Testbench (\`cpu_tb.v\`)
 
-* **Improving Accuracy**: Achieved high accuracy in sentiment detection, particularly in informal and sarcastic content.
-* **Boosting Response Speed**: Allowed real-time monitoring and immediate response to emerging trends and crises.
-* **Enhanced Strategic Decisions**: Provided clear, actionable insights, informing strategic decisions in marketing, public relations, and crisis management.
+A comprehensive Verilog testbench was created to verify CPU functionality before FPGA implementation.
+
+#### Key Features
+
+1. **Clock Generation (50 MHz)**
+\`\`\`verilog
+initial begin
+    clk = 1'b0;
+    forever #10 clk = ~clk; // Toggle every 10 ns
+end
+\`\`\`
+
+2. **Reset Sequence**
+\`\`\`verilog
+initial begin
+    rst = 1'b1;
+    #20 rst = 1'b0; // Keep reset high for two cycles
+end
+\`\`\`
+
+3. **Signal Monitoring**
+   - \`$monitor\` prints internal signals each cycle
+   - Tracks PC, instruction, register values, ALU results, control signals
+   - Waveform dump (\`$dumpvars\`) for post-simulation inspection
+
+4. **Test Program Coverage**
+   - Initialize registers (e.g., \`ADDI R1, R0, 5\`)
+   - Perform arithmetic operations (\`ADD\`, \`SUB\`, \`AND\`, \`SLL\`)
+   - Test memory access (\`LW\`/\`SW\`)
+   - Branch instructions (\`BEQ\`/\`BNE\`) to confirm PC updates
+   - Jump (\`JMP\`) to confirm unconditional PC update
+
+### Simulation Verification
+
+The simulation confirmed:
+- Correct instruction fetch from memory
+- Proper control signal generation
+- Accurate register file read/write operations
+- Correct ALU computations and zero flag setting
+- Proper data memory load/store operations
+- Correct PC updates for branches and jumps
+
+### Waveform Analysis
+
+Using Vivado's waveform viewer, verified:
+- **Clock & Reset Behavior**: PC resets to 0 on \`rst\`
+- **Instruction Fetch**: 16-bit instruction matches memory initialization
+- **Control & Data Flow**: Control signals change during decode stage
+- **Branch/Jump Timing**: PC updates correctly for all control flow instructions
 
 ---
 
-## Future Enhancements
+## FPGA Hardware Demonstration
 
-Future directions include:
+After simulation verification, the design was synthesized and loaded onto a Basys 3 FPGA (Xilinx Artix-7).
 
-* **Advanced NLP Techniques**: Incorporating transformer-based models like BERT for even deeper semantic understanding.
-* **Multi-Language Support**: Expanding analysis capabilities to non-English content for global sentiment monitoring.
-* **Predictive Analytics Integration**: Leveraging historical sentiment data and predictive modeling to forecast future sentiment shifts.
+### Implementation Features
+
+#### LED Output Pattern
+A simple test program that doubles a register value every clock cycle:
+
+\`\`\`assembly
+ADDI R1, R0, 1    // R1 = 1
+LOOP: ADD R1, R1, R1  // R1 = R1 + R1 (2, 4, 8, 16, …)
+      JMP LOOP         // infinite loop
+\`\`\`
+
+The lower 8 bits of R1 (\`R1[7:0]\`) are mapped to the 8 onboard LEDs, displaying binary patterns:
+\`\`\`
+0000_0001 → 0000_0010 → 0000_0100 → 0000_1000 → 0001_0000 → ...
+\`\`\`
+
+#### User Controls
+- **Reset Button** (\`rst_btn\`): Tied to the CPU's \`rst\` signal, clearing registers and PC
+- **Manual Clock Button** (\`clk_btn\`): Generates single-step clock pulse for cycle-by-cycle debugging
+
+#### Hardware Verification
+- LED patterns matched simulation exactly
+- Reset button functionality confirmed
+- Manual clock stepping allowed precise timing inspection
+- Each LED update corresponded to one clock cycle
 
 ---
 
 ## Conclusion
 
-**Sentiment Sphere** exemplifies the power of integrating NLP, web scraping, and sentiment analysis tools into a robust real-time analysis pipeline. Its ability to accurately interpret and instantly respond to complex emotional expressions positions it as an essential tool for organizations navigating the dynamic landscape of social media sentiments.
-`,
+This project demonstrates a fully functional 16-bit single-cycle CPU implemented in Verilog. All essential modules operate together to fetch, decode, execute, and write back instructions in one cycle.
+
+### Key Achievements
+
+1. **Program Counter** handles sequential fetch, conditional branches, and unconditional jumps
+2. **Instruction Memory** stores instructions in little-endian format and outputs 16-bit values
+3. **Control Unit** decodes opcodes and function fields to generate correct control signals
+4. **Register File** provides fast read/write ports for register operands and write-back
+5. **Sign-Extend** ensures immediate values preserve sign when extended to 16 bits
+6. **ALU** performs arithmetic/logic operations and sets zero flag for branches
+7. **Data Memory** supports both byte and word accesses under byte-enable control
+8. **Multiplexers** route operands and write-back data based on control signals
+9. **Testbench and Simulation** verify all instructions in a cycle-accurate manner
+10. **FPGA Demonstration** confirms correct behavior in actual hardware with visible LED patterns
+
+The final implementation successfully demonstrates a working 16-bit processor on the Basys 3 FPGA, capable of running small programs and providing real-time debugging through LEDs and pushbuttons.
+
+---
+
+## References
+
+- **Xilinx Vivado Design Suite User Guide** – For simulation, synthesis, and bitstream generation
+- **Samir Palnitkar, Verilog HDL: A Guide to Digital Design and Synthesis** – Verilog coding conventions and best practices
+- **Basys 3 Reference Manual (Digilent)** – Board-specific pin assignments, LED/button mappings, and clock sources
+- **University lecture notes on computer architecture and single-cycle datapath design**`,
     },
     {
       id: 4,
-      slug: "llm-preprocessing-pipeline",
-      title: "LLM Preprocessing Pipeline",
+      image: "project_4.jpeg",
+      slug: "Reinforcement-Learning-Environment-for-Autonomous-Drone-Delivery",
+      title: "Reinforcement Learning Environment for Autonomous Drone Delivery",
       date: "2025-04-19",
       excerpt:
-        "The LLM Preprocessing Pipeline project was developed to efficiently preprocess large-scale textual datasets for training advanced large language models (LLMs). By leveraging distributed computing frameworks such as Hadoop and Apache Spark within Amazon Web Services' Elastic MapReduce (AWS EMR) environment, this pipeline significantly enhanced preprocessing speed and NLP task readiness. The implementation involved generating neural embeddings through JTokkit and Deeplearning4j, achieving a remarkable 40% reduction in data preprocessing time.",
-      content: `# LLM Preprocessing Pipeline
+        "In this project, I define, implement, and analyze both deterministic and stochastic Reinforcement Learning (RL) environments for an autonomous drone tasked with picking up two packages and delivering them to specified destinations on a 6×6 grid. The agent’s goal is to navigate around dynamic obstacles (tornadoes, wind zones, birds) while minimizing penalties and maximizing delivery rewards. After specifying the environment (states, actions, transition dynamics, and reward structure), I apply tabular RL methods—namely Q-Learning and Double Q-Learning—to demonstrate how an agent can learn optimal policies under both deterministic and stochastic conditions. This blog delves deeply into the technical design choices, algorithmic details, and empirical results.",
+      content: `# Defining and Solving a Reinforcement Learning Environment for Autonomous Drone Delivery
 
-**Tech Stack:** AI/ML, Spark, Hadoop, MapReduce, AWS EMR, Deeplearning4j
+## Topic
 
----
-
-## Project Overview
-
-The **LLM Preprocessing Pipeline** project was developed to efficiently preprocess large-scale textual datasets for training advanced large language models (LLMs). By leveraging distributed computing frameworks such as Hadoop and Apache Spark within Amazon Web Services' Elastic MapReduce (AWS EMR) environment, this pipeline significantly enhanced preprocessing speed and NLP task readiness. The implementation involved generating neural embeddings through JTokkit and Deeplearning4j, achieving a remarkable 40% reduction in data preprocessing time.
+Designing, Implementing, and Analyzing Tabular RL Solutions in a 6×6 Autonomous Drone Delivery Grid
 
 ---
 
-## Motivation
+## Introduction
 
-The training of sophisticated large language models (LLMs) necessitates extensive preprocessing of vast textual corpora. Traditional preprocessing methods often struggle with scalability, efficiency, and timeliness, especially with large datasets exceeding gigabytes in size. The **LLM Preprocessing Pipeline** addresses these issues by deploying robust distributed computing technologies, ensuring efficient preprocessing that accelerates the readiness of NLP tasks for subsequent model training.
-
----
-
-## Technical Details
-
-### Data Acquisition and Initial Setup
-
-#### Dataset
-
-The project involved preprocessing a substantial textual corpus exceeding 5GB in size, sourced from diverse domains including academic articles, news archives, social media interactions, and literary texts. These varied sources ensured a comprehensive training set for robust language model development.
-
-#### Environment Setup
-
-The AWS Elastic MapReduce (EMR) cluster provided a scalable, cost-effective environment optimized for processing massive datasets using distributed computing frameworks like Hadoop and Spark.
-
-* **Cluster Configuration**: EC2 instances optimized for memory-intensive tasks.
-* **Storage Solutions**: Amazon S3 for durable and scalable data storage, integrated seamlessly with EMR.
+In this project, I define, implement, and analyze both deterministic and stochastic Reinforcement Learning (RL) environments for an autonomous drone tasked with picking up two packages and delivering them to specified destinations on a 6×6 grid. The agent's goal is to navigate around dynamic obstacles (tornadoes, wind zones, birds) while minimizing penalties and maximizing delivery rewards. After specifying the environment (states, actions, transition dynamics, and reward structure), I apply tabular RL methods—namely Q-Learning and Double Q-Learning—to demonstrate how an agent can learn optimal policies under both deterministic and stochastic conditions. This blog delves deeply into the technical design choices, algorithmic details, and empirical results.
 
 ---
 
-## Distributed Preprocessing with Hadoop and MapReduce
+## 1. Environment Design
 
-### Hadoop Ecosystem
+### 1.1 Grid Layout and Components
 
-Apache Hadoop's distributed file system (HDFS) and MapReduce programming model facilitated efficient storage and parallel processing of large textual datasets.
+- **Grid Size**: 6×6 (rows and columns indexed 0..5).
+- **Cells**: Each cell may contain one of the following:
+  - 📦 Package pickup location (two distinct cells, each with a different package).
+  - 🚁 Drone's starting position.
+  - 🎯 Delivery destination (two distinct cells, matching package labels).
+  - 🌪 Tornado (no-fly zone; entering incurs a large negative reward).
+  - 🌬 Wind zone (adjacent cells around the tornado; entering incurs wind-push mechanics or penalties).
+  - 🦅 Bird (moving obstacle; entering incurs negative reward).
+  - 🏠 Home base (optional "safe" cell; not strictly required for this assignment).
+  - ⬜ Empty cell (free to navigate).
 
-#### Data Storage with HDFS
+### Example Deterministic Layout (Indices in parentheses):
 
-* **Reliability and Fault Tolerance**: Ensured data availability and durability despite node failures.
-* **Scalable Storage**: Accommodated large volumes of textual data distributed across multiple nodes.
+\`\`\`
+(0,0) 🚁   (0,1) ⬜   (0,2) ⬜   (0,3) ⬜   (0,4) ⬜   (0,5) 🛖  
+(1,0) ⬜   (1,1) ⬜   (1,2) ⬜   (1,3) ⬜   (1,4) ⬜   (1,5) 🦅  
+(2,0) ⬜   (2,1) ⬜   (2,2) 🎁   (2,3) ⬇   (2,4) ⬜   (2,5) ⬜  
+(3,0) ⬜   (3,1) ⬜   (3,2) ⬇   (3,3) 🌪   (3,4) ⬆   (3,5) ⬜  
+(4,0) ⬜   (4,1) ⬜   (4,2) ⬜   (4,3) ➡   (4,4) ⬜   (4,5) ⬜  
+(5,0) 🛖  (5,1) 🦅  (5,2) ⬜   (5,3) ⬜   (5,4) ⬜   (5,5) 🏠  
+\`\`\`
 
-#### MapReduce Tasks
+**Legend:**
+- 🚁 Drone
+- 🎁 Package 1 (P1)
+- ⬇ Wind cell (downward push)
+- ⬆ Wind cell (upward push)
+- ➡ Wind cell (rightward push)
+- 🌪 Tornado (no-fly)
+- 🦅 Bird (obstacle)
+- 📦 Package 2 (P2)
+- 🛖 (Home base or waiting zone)
+- 🎯 (Delivery location—for P1 or P2)
+- ⬜ Empty cell
 
-Custom MapReduce tasks provided effective data transformations including:
-
-* **Tokenization**: Distributed processing to rapidly tokenize textual data.
-* **Stopword Removal and Text Normalization**: Parallelized for optimal preprocessing efficiency.
-
----
-
-## Apache Spark for Advanced Processing
-
-### Spark Framework Utilization
-
-Apache Spark was strategically employed to handle advanced preprocessing tasks due to its superior performance in memory-intensive operations and iterative computations.
-
-#### Spark DataFrame and RDD Operations
-
-* **Efficient Data Manipulation**: Utilized Spark’s DataFrame API for structured data handling and rapid preprocessing.
-* **Parallel Processing**: Leveraged Resilient Distributed Datasets (RDDs) for flexible, fault-tolerant transformations at scale.
-
-#### Distributed Text Transformations
-
-* **Vectorization**: Converted textual data into numerical vectors for downstream NLP tasks.
-* **Feature Extraction and Selection**: Accelerated feature extraction tasks using distributed processing capabilities.
-
----
-
-## Neural Embeddings with JTokkit and Deeplearning4j
-
-### Introduction to Deeplearning4j
-
-Deeplearning4j, a Java-based deep learning library, was employed to produce high-quality neural embeddings suitable for language modeling tasks.
-
-#### Neural Embedding Generation
-
-* **Embedding Techniques**: Used JTokkit to tokenize and preprocess text efficiently, feeding clean input to Deeplearning4j.
-* **Embedding Training**: Deeplearning4j trained embeddings on distributed Spark clusters, leveraging parallel computation to achieve rapid convergence.
-
-#### Enhanced NLP Task Readiness
-
-* Generated embeddings improved model training speed and NLP task accuracy by providing high-quality semantic representations of textual data.
+> **Note**: In the deterministic setup, all elements (location of tornado, wind‐affected cells, birds, packages, destinations, etc.) remain constant across episodes. In the stochastic version (Section 1.4), these elements are randomized at the start and/or move during execution.
 
 ---
 
-## AWS EMR Integration
+### 1.2 State Representation
 
-### Cloud-Based Scalability and Efficiency
+Each grid cell is represented by its row and column index, so the drone's position is a tuple (r, c) with 0 ≤ r, c ≤ 5. In addition to position, the agent's state must encode:
 
-The pipeline capitalized on AWS EMR’s capabilities to seamlessly scale computational resources based on workload demand.
+1. **Carry Status for Two Packages:**
+   - \`picked_p1 ∈ {0,1}\` (0 = not carrying P1, 1 = carrying P1).
+   - \`picked_p2 ∈ {0,1}\` (0 = not carrying P2, 1 = carrying P2).
 
-* **Auto Scaling**: Dynamically adjusted cluster size to optimize resource usage and minimize costs.
-* **Job Scheduling and Monitoring**: Integrated Amazon CloudWatch and EMR monitoring tools for real-time performance tracking and optimization.
+2. **Delivery Status:**
+   - \`delivered_p1 ∈ {0,1}\`
+   - \`delivered_p2 ∈ {0,1}\`
 
----
+Thus, the full state can be represented as a 6‐tuple:
 
-## Performance and Results
+\`\`\`
+State = (r, c, picked_p1, picked_p2, delivered_p1, delivered_p2)
+\`\`\`
 
-The pipeline achieved significant milestones including:
-
-* **40% Reduction in Preprocessing Time**: Compared to traditional NLP preprocessing workflows, demonstrating enhanced scalability and efficiency.
-* **Improved NLP Task Readiness**: Rapid availability of processed data significantly accelerated subsequent LLM training phases.
-* **Robustness and Fault Tolerance**: Ensured continuous, uninterrupted data processing, maintaining high productivity.
-
----
-
-## Technical Challenges and Solutions
-
-Key challenges addressed during development included:
-
-* **Scalability and Resource Management**: Optimized AWS EMR configurations and Spark cluster management, ensuring efficient resource utilization.
-* **Distributed Processing Complexity**: Successfully handled complexities associated with distributed tokenization, normalization, and embedding generation through strategic task partitioning.
-* **Integration of Multiple Technologies**: Seamlessly integrated Hadoop, Spark, Deeplearning4j, and AWS EMR to form a coherent preprocessing pipeline.
+There are at most 6 × 6 × 2 × 2 × 2 × 2 = 6,912 possible states, though many are unreachable (e.g., carrying a package after having delivered it). In practice, we only consider states that satisfy consistency constraints (e.g., you cannot deliver a package you didn't pick up, you cannot pick up more than once, etc.).
 
 ---
 
-## Future Enhancements
+### 1.3 Action Space
 
-Potential future improvements include:
+At each time step, the drone can choose exactly one action from the following discrete set of eight possible actions:
 
-* **Real-Time Data Processing**: Adapting the pipeline to support streaming data sources for near-instantaneous preprocessing.
-* **Enhanced Embedding Techniques**: Exploring transformer-based models for even richer embeddings.
-* **Automated Pipeline Optimization**: Utilizing machine learning-driven resource optimization to dynamically enhance pipeline efficiency.
+1. **Movement Actions** (deterministic grid‐world style):
+   - Up (move from (r,c) → (r−1, c))
+   - Down (move from (r,c) → (r+1, c))
+   - Left (move from (r,c) → (r, c−1))
+   - Right (move from (r,c) → (r, c+1))
+
+2. **Interaction Actions:**
+   - PickUp (if r,c contains an unpicked package, set that package's picked flag to 1)
+   - DropOff (if r,c is the correct destination for a currently carried package, sets that package's delivered flag to 1)
+
+3. **No‐Op / Hover Action:**
+   - Stay (drone remains in place; useful if wind or dynamic obstacles would otherwise force it to move)
+
+Attempting any invalid action (like moving off the grid, picking up where no package exists, or dropping off at the wrong cell) incurs an immediate negative penalty (see Section 1.5).
 
 ---
+
+### 1.4 Deterministic vs. Stochastic Variants
+
+#### 1.4.1 Deterministic Environment
+
+- **Fixed Layout Across Episodes:**
+  - Drone's start position, package pickup cells, delivery cells, tornado cell, wind‐affected cells, and bird positions remain identical each run.
+
+- **Transition Dynamics:**
+  - If the drone chooses net "Up" in cell (r,c), next state is (r−1,c) (unless that is invalid or blocked).
+  - Entering a wind‐affected cell always pushes the drone exactly one cell in the wind's direction (e.g., entering a "wind‐down" cell forces an extra move to (r+1,c)). There is no randomness in wind behavior.
+
+- **Bird Collisions:**
+  - If the drone moves into a bird's cell, it incurs a fixed –50 penalty and remains in the same cell (bird occupies an impassable obstacle cell).
+
+Because transitions are fully predictable, the drone can eventually learn a deterministic shortest‐path strategy to collect both packages and deliver them while avoiding all obstacles and penalties.
+
+#### 1.4.2 Stochastic Environment
+
+- **Randomized Initialization:**
+  - At the beginning of each episode, the following elements are placed randomly on the 6×6 grid (subject to no overlap constraints):
+    - Drone's start position
+    - Two package pickup cells (P1, P2)
+    - Two delivery cells (D1, D2)
+    - Tornado (no‐fly zone)
+    - Surrounding wind cells (wind "push" zones around the tornado)
+    - Two birds (dynamic obstacles)
+
+- **Dynamic Obstacles:**
+  - **Tornado Movement**: On every time step, the tornado cell moves to one of its four neighboring empty cells (up/down/left/right) chosen uniformly at random. If a move would leave the grid, it stays put.
+  - **Wind Shift**: The four wind cells (adjacent to the tornado) update accordingly after the tornado moves: each adjacent cell becomes a new wind push cell in the direction defined by the tornado's new location.
+  - **Bird Movement**: Each bird moves randomly to any of its up/down/left/right neighbors (or stays in place) with equal probability. Bird collisions with the drone incur a –50 penalty and the drone is forced back to its previous cell.
+
+- **Transition Stochasticity:**
+  - Even if the drone selects "Up," there is a probability (determined by wind or bird movement) that it is not in Up‐(r−1,c) or remains for a collision penalty.
+  - Entering a wind cell has a 70% chance of pushing the drone in the wind's direction and a 30% chance of simply remaining in the wind cell without further movement.
+
+Because the environment evolves unpredictably, the drone must learn a robust policy that accounts for both spatial layout and dynamic disturbances.
+
+---
+
+### 1.5 Reward Structure
+
+The reward system encourages correct pickups/deliveries and penalizes undesirable actions, summarized as follows:
+
+| Event | Reward/Penalty |
+|-------|----------------|
+| Successfully delivering a package (arrive at correct delivery cell) | +100 |
+| Picking up a package at a valid location | +25 |
+| Entering a tornado (no‐fly zone) | –100 |
+| Being hit by a bird (collision) | –50 |
+| Entering a wind cell (any direction) | –10 |
+| Movement cost (each step, valid move) | –2 |
+| Dropping a package at the wrong location | –50 |
+| Attempting to pick up when not at a package cell | –25 |
+| Moving out of the grid (invalid move) | –25 |
+| Repeating the same move consecutively (no progress) | –50 |
+
+> **Note**: In the current assignment, "Successfully delivering both packages" ends the episode as a terminal state. Additional reward terms (e.g., for failed drop‐offs, repeated invalid attempts, or partially completed deliveries) may be refined in subsequent assignments.
+
+---
+
+### 1.6 Safety and Validity Checks
+
+To ensure the agent only selects legal actions and stays within the defined state‐space, I enforce:
+
+1. **Boundary Checks:**
+   - Before moving, verify 0 ≤ r_new < 6 and 0 ≤ c_new < 6. If the move is outside the grid, apply a –25 penalty and remain in (r, c).
+
+2. **Pick‐Up Validation:**
+   - Only allow PickUp if (r,c) matches a package's location and that package is not already picked. Invalid attempts yield –25 penalty.
+
+3. **Drop‐Off Validation:**
+   - Only allow DropOff if (r,c) matches the correct delivery cell for a currently carried package.
+   - If (r,c) is any other cell (or if the package is not being carried), impose a –50 penalty and do not remove the package from the agent's inventory.
+
+4. **No‐Fly Zones (Tornado):**
+   - Attempting to move into (r,c) occupied by the tornado results in a –100 penalty and the agent stays in its original cell.
+
+5. **Bird Collisions:**
+   - If a bird occupies the same cell as the drone after both have moved, impose a –50 penalty and move the drone back to its previous cell.
+
+6. **Wind‐Push Mechanics:**
+   - Upon entering a wind cell, the drone has a 70% chance of being forced one cell in the wind's direction. If that cell is invalid (e.g., outside the grid or tornado), treat it as if the drone attempted to illegally move into a tornado or off‐grid (apply the corresponding penalty).
+
+By embedding these checks in the environment's \`step(action)\` function, the RL agent never "breaks" the rules—even if it repeatedly tries invalid actions. All illegal attempts immediately incur penalties, keeping the agent strictly within the intended MDP.
+
+---
+
+## 2. Deterministic Environment Implementation
+
+### 2.1 Transition Function (Deterministic)
+
+\`\`\`python
+def deterministic_step(state, action):
+    (r, c, p1, p2, d1, d2) = state
+    reward = 0
+    next_state = state  # default if invalid or no-op
+
+    # 1. If action == "PickUp":
+    if action == "PickUp":
+        if (r,c) == package1_location and p1 == 0:
+            p1 = 1
+            reward = +25
+        elif (r,c) == package2_location and p2 == 0:
+            p2 = 1
+            reward = +25
+        else:
+            reward = -25  # no package here
+
+    # 2. Elif action == "DropOff":
+    elif action == "DropOff":
+        if p1 == 1 and (r,c) == delivery1_location:
+            p1 = 0
+            d1 = 1
+            reward = +100
+        elif p2 == 1 and (r,c) == delivery2_location:
+            p2 = 0
+            d2 = 1
+            reward = +100
+        else:
+            reward = -50  # wrong drop-off
+
+    # 3. Elif action in {"Up","Down","Left","Right"}:
+    elif action in directions:
+        (dr, dc) = direction_vector[action]
+        new_r, new_c = r + dr, c + dc
+
+        # Boundary check
+        if not (0 <= new_r < 6 and 0 <= new_c < 6):
+            reward = -25
+            new_r, new_c = r, c
+        # Tornado check
+        elif (new_r, new_c) == tornado_location:
+            reward = -100
+            new_r, new_c = r, c
+        # Bird check (birds are static in deterministic env)
+        elif (new_r, new_c) in bird_locations:
+            reward = -50
+            new_r, new_c = r, c
+        else:
+            # Valid move
+            reward = -2
+            r, c = new_r, new_c
+
+            # If landing on wind cell (deterministic direction)
+            if (r, c) in wind_cells:
+                reward += -10
+                (wr, wc) = wind_push_vector[(r,c)]
+                candidate_r, candidate_c = r + wr, c + wc
+                if 0 <= candidate_r < 6 and 0 <= candidate_c < 6 \
+                   and (candidate_r, candidate_c) != tornado_location:
+                    r, c = candidate_r, candidate_c
+                else:
+                    # wind‐pushed into invalid => same penalty logic as above
+                    if not (0 <= candidate_r < 6 and 0 <= candidate_c < 6):
+                        reward += -25
+                    else:
+                        reward += -100
+                    r, c = new_r, new_c
+
+    # 4. Else "Stay":
+    elif action == "Stay":
+        reward = -2  # still incurs movement cost
+
+    next_state = (r, c, p1, p2, d1, d2)
+    done = (d1 == 1 and d2 == 1)
+    return next_state, reward, done
+\`\`\`
+
+Adapted from the deterministic rules in the assignment.
+
+- **Terminal Check**: When both \`d1 == 1\` and \`d2 == 1\`, the episode ends—both packages delivered.
+- **Reward Summation**: When multiple events occur in the same step (e.g., step cost + wind push + invalid wind‐push), all corresponding penalties are summed.
+
+---
+
+### 2.2 Visualization Example
+
+At initialization (deterministic layout), we may see:
+
+\`\`\`
+Step 0:
+🚁 ⬜ ⬜ ⬜ ⬜ 🛖
+⬜ ⬜ ⬜ ⬜ ⬜ 🦅
+⬜ ⬜ 🎁 ⬇ ⬜ ⬜
+⬜ ⬜ ⬇ 🌪 ⬆ ⬜
+⬜ ⬜ ⬜ ➡ ⬜ ⬜
+🛖 🦅 ⬜ ⬜ ⬜ 🏠
+
+State: r=0, c=0, p1=0, p2=0, d1=0, d2=0
+Reward so far: 0
+\`\`\`
+
+After choosing "Right" four times to reach (0,4) and so on, the environment renders exactly as above, confirming that transitions and obstacles behave without randomness.
+
+---
+
+## 3. Stochastic Environment Implementation
+
+### 3.1 Randomized Initialization
+
+\`\`\`python
+def initialize_stochastic_env():
+    # Create empty 6x6 grid
+    grid_cells = [(r, c) for r in range(6) for c in range(6)]
+
+    # Randomly place drone start
+    drone_start = random.choice(grid_cells)
+    grid_cells.remove(drone_start)
+
+    # Randomly place package pickup1, pickup2
+    pickup1 = random.choice(grid_cells); grid_cells.remove(pickup1)
+    pickup2 = random.choice(grid_cells); grid_cells.remove(pickup2)
+
+    # Randomly place delivery1, delivery2
+    delivery1 = random.choice(grid_cells); grid_cells.remove(delivery1)
+    delivery2 = random.choice(grid_cells); grid_cells.remove(delivery2)
+
+    # Randomly place tornado
+    tornado = random.choice(grid_cells); grid_cells.remove(tornado)
+
+    # Wind cells: the four orthogonal neighbors of tornado (if valid)
+    wind_cells = []
+    for (dr, dc) in [(1,0),(-1,0),(0,1),(0,-1)]:
+        wr, wc = tornado[0] + dr, tornado[1] + dc
+        if 0 <= wr < 6 and 0 <= wc < 6:
+            wind_cells.append((wr, wc))
+
+    # Remove wind_cells from available positions
+    for wc in wind_cells:
+        if wc in grid_cells:
+            grid_cells.remove(wc)
+
+    # Randomly place two birds
+    bird1 = random.choice(grid_cells); grid_cells.remove(bird1)
+    bird2 = random.choice(grid_cells); grid_cells.remove(bird2)
+
+    return {
+        "drone": drone_start,
+        "pickup1": pickup1,
+        "pickup2": pickup2,
+        "delivery1": delivery1,
+        "delivery2": delivery2,
+        "tornado": tornado,
+        "wind_cells": wind_cells,
+        "birds": [bird1, bird2]
+    }
+\`\`\`
+
+- **Every Episode Reset**: Calls \`initialize_stochastic_env()\` to generate a unique configuration.
+- **Dynamic Movement Rules (Each Time Step)**:
+  1. **Tornado Movement:**
+     - Randomly select one valid neighbor of current tornado cell; move tornado there.
+     - Recompute \`wind_cells\` around new tornado.
+  2. **Bird Movement:**
+     - For each bird, randomly select one of its up/down/left/right neighbors (or stay put) with equal probability.
+  3. **Drone's Intended Action:**
+     - Process as in deterministic environment, except:
+     - **Wind Encounter**: 70% chance of forced "push" one cell in wind direction, else remain.
+     - **Bird Collision**: If drone's final position == any bird's new position, apply –50 and revert to previous position.
+
+Because tornado and birds move unpredictably, the transition function is no longer deterministic:
+
+\`\`\`
+P(s' | s, a) = Σ over tornado_moves, bird_moves, wind_outcomes of 
+               [Probability of (tornado_move, bird_moves, wind_outcome) × δ(s' = resulting_state)].
+\`\`\`
+
+In practice, we sample a single stochastic outcome per time step.
+
+---
+
+### 3.2 Stochastic Transition Function (Pseudo‐Code)
+
+\`\`\`python
+def stochastic_step(state, action, env):
+    (r, c, p1, p2, d1, d2) = state
+    reward = 0
+
+    # 0. Save previous drone position (r_old, c_old)
+    r_old, c_old = r, c
+
+    # 1. Process drone's chosen action (Up/Down/Left/Right/PickUp/DropOff/Stay)
+    #    - Similar checks as deterministic, except no immediate wind push.
+    #    - If action in movement, attempt to move to (r', c'), but:
+    #         if invalid or tornado, penalty and remain.
+    #         if new cell is a bird, penalty and remain.
+    #         else update r, c.
+    #    - If action == PickUp / DropOff, same as deterministic (no stochasticity in interactions).
+
+    # 2. After moving, check if (r,c) is in wind_cells:
+    if (r, c) in env["wind_cells"]:
+        reward += -10
+        if random() < 0.7:
+            # forced wind push
+            (wr, wc) = wind_push_vector[(r, c)]
+            candidate_r, candidate_c = r + wr, c + wc
+            if valid_cell(candidate_r, candidate_c, env):
+                r, c = candidate_r, candidate_c
+            else:
+                # invalid wind push: treat as tornado or off-grid
+                if not (0 <= candidate_r < 6 and 0 <= candidate_c < 6):
+                    reward += -25
+                else:
+                    reward += -100
+                # Drone stays at (r_old) or (r, c)? In the assignment, we revert to old just once
+                r, c = r_old, c_old
+
+    # 3. Randomly update tornado position
+    tornado_neighbors = get_valid_neighbors(env["tornado"])
+    new_tornado = random.choice(tornado_neighbors + [env["tornado"]])  # can stay put
+    env["tornado"] = new_tornado
+    # Recompute wind_cells around new tornado
+    env["wind_cells"] = [
+        (new_tornado[0] + dr, new_tornado[1] + dc)
+        for dr, dc in [(1,0),(-1,0),(0,1),(0,-1)]
+        if 0 <= new_tornado[0]+dr < 6 and 0 <= new_tornado[1]+dc < 6
+    ]
+
+    # 4. Randomly update birds' positions
+    new_birds = []
+    for bird in env["birds"]:
+        bird_neighbors = get_valid_neighbors(bird) + [bird]  # staying still is a choice
+        new_bird = random.choice(bird_neighbors)
+        new_birds.append(new_bird)
+    env["birds"] = new_birds
+
+    # 5. Bird collision check
+    if (r, c) in env["birds"]:
+        reward += -50
+        r, c = r_old, c_old  # revert to previous cell
+
+    # 6. Final step cost if drone moved or stayed
+    reward += -2
+
+    # 7. Terminal condition
+    done = (d1 == 1 and d2 == 1)
+
+    next_state = (r, c, p1, p2, d1, d2)
+    return next_state, reward, done, env
+\`\`\`
+
+- The order of stochastic events matters: wind push occurs instantly after movement but before tornado/bird updates.
+- Tornado and bird updates affect subsequent time steps.
+- Because transitions depend on both the agent's action and RNG events, we cannot precompute all (s, a) → s' pairs exactly—learning must rely on sampling.
+
+---
+
+## 4. Reward System Rationale
+
+To guide the agent toward efficient, safe deliveries, I designed a reward function that balances positive incentives for correct pickups/deliveries with penalties for hazards and extraneous behavior:
+
+1. **Positive Rewards:**
+   - Deliver a Package: +100
+   - Pick Up a Package: +25
+
+2. **Movement Penalties:**
+   - Each Step: –2 (encourages shortest paths)
+   - Wind Cell Entry: –10 (discourages risky wind‐zones)
+
+3. **Severe Penalties (Safety Hazards):**
+   - Enter Tornado (No‐Fly): –100 (keeps drone away from tornado)
+   - Bird Collision: –50 (avoids birds)
+
+4. **Invalid/Unhelpful Actions:**
+   - Drop Off at Wrong Location: –50 (discourages random drop‐offs)
+   - Pick Up When No Package Present: –25
+   - Move Out of Grid: –25
+   - Repeat Same Move Twice in a Row: –50 (prevents oscillation)
+
+This reward scheme ensures:
+
+- **Priority 1**: Complete deliveries (2×+100).
+- **Priority 2**: Remain safe (avoid tornadoes and birds).
+- **Priority 3**: Minimize wasted movement or illegal actions.
+- **Priority 4**: Follow correct pick‐up/drop‐off protocol.
+
+### Empirical Observations:
+
+- Without step penalties (–2), the learned policy often wandered unnecessarily.
+- Without "repeat" penalty (–50), the agent sometimes oscillated between two adjacent safe cells.
+- Once balanced, the drone learned to pick up P2 first (whichever was nearer) then P1, deliver to D2, then D1, in approximately 25–30 steps with maximal cumulative reward.
+
+---
+
+## 5. Tabular Reinforcement Learning Methods
+
+### 5.1 Q-Learning (Off-Policy, Model‐Free)
+
+#### 5.1.1 Algorithm Overview
+
+Q-Learning learns an action‐value function Q(s,a) that estimates the expected discounted return if the agent starts in state s, takes action a, then follows the (learned) optimal policy thereafter. The update rule is:
+
+\`\`\`
+Q(s,a) ← Q(s,a) + α [ r + γ max_{a'} Q(s', a') – Q(s,a) ]
+\`\`\`
+
+- α (Alpha) = Learning rate (e.g., 0.1)
+- γ (Gamma) = Discount factor (e.g., 0.95)
+- ε (Epsilon) = Exploration rate (initially 1.0, decaying to 0.01)
+- ε-Greedy Action Selection: With probability ε, choose a random valid action; otherwise choose argmax_a Q(s,a).
+
+#### 5.1.2 Hyperparameters (Deterministic)
+
+- \`alpha = 0.1\`
+- \`gamma = 0.95\`
+- \`epsilon_start = 1.0\`
+- \`epsilon_decay = 0.999\`
+- \`epsilon_min = 0.01\`
+- \`episodes = 10,000\`
+- \`max_steps_per_episode = 500\`
+
+#### 5.1.3 Implementation Snippet
+
+\`\`\`python
+# Initialize Q-table: Q[state][action] = 0 for all states, actions
+Q = defaultdict(lambda: np.zeros(num_actions))
+
+epsilon = epsilon_start
+
+for episode in range(1, episodes+1):
+    state = env.reset(deterministic=True)  # deterministic initialization
+    done = False
+    for step in range(max_steps_per_episode):
+        if random.random() < epsilon:
+            action = random.choice(env.valid_actions(state))
+        else:
+            action = np.argmax(Q[state])
+
+        next_state, reward, done, _ = env.step(state, action)
+        best_next = np.max(Q[next_state])
+        td_target = reward + gamma * best_next * (not done)
+        td_error = td_target - Q[state][action]
+        Q[state][action] += alpha * td_error
+
+        state = next_state
+        if done:
+            break
+
+    # Decay epsilon
+    if epsilon > epsilon_min:
+        epsilon *= epsilon_decay
+\`\`\`
+
+- **Storage**: Q is a Python defaultdict keyed by state‐tuples (r, c, p1, p2, d1, d2), each mapping to a NumPy array of length num_actions.
+- **Terminal Transition**: When done=True (both packages delivered), best_next is taken as zero (no future reward).
+
+#### 5.1.4 Deterministic Environment Results
+
+- **Training Episodes**: 10,000
+- **Max Reward Achieved**: +185 (two deliveries: 2×100 – (approx.) 15 step costs = +185).
+- **Average Steps to Complete**: ~25
+- **Success Rate**: 100% (after ~3,000 episodes, the agent always delivered both packages within the step limit).
+
+A representative reward‐per‐episode plot showed rapid convergence:
+
+\`\`\`
+Episode:   0–1000 → Increasing from ~–200 to ~+100  
+Episode:   1000–3000 → Fluctuations around +100–+185  
+Episode:   3000–10000 → Plateaus near +185 consistently
+\`\`\`
+
+This confirms that Q-Learning found the optimal policy for the deterministic layout.
+
+---
+
+### 5.2 Double Q‐Learning
+
+#### 5.2.1 Motivation
+
+Standard Q-Learning can suffer from overestimation bias when using the same Q‐values to both select and evaluate the next action. Double Q-Learning mitigates this by maintaining two independent Q‐tables, Q1 and Q2, and using one table to select the action and the other to estimate its value.
+
+#### 5.2.2 Update Rules
+
+On each step (with 50% probability), update either Q1 or Q2:
+
+- If updating Q1:
+  \`\`\`
+  a_max = argmax_a Q1(s', a)
+  Q1(s, a) ← Q1(s, a) + α [ r + γ Q2(s', a_max) – Q1(s, a) ]
+  \`\`\`
+
+- If updating Q2:
+  \`\`\`
+  a_max = argmax_a Q2(s', a)
+  Q2(s, a) ← Q2(s, a) + α [ r + γ Q1(s', a_max) – Q2(s, a) ]
+  \`\`\`
+
+#### 5.2.3 Implementation Snippet
+
+\`\`\`python
+# Initialize two Q-tables
+Q1 = defaultdict(lambda: np.zeros(num_actions))
+Q2 = defaultdict(lambda: np.zeros(num_actions))
+
+epsilon = epsilon_start
+
+for episode in range(1, episodes+1):
+    state = env.reset(stochastic=False)  # or stochastic=True if experimenting
+    done = False
+    for step in range(max_steps_per_episode):
+        if random.random() < epsilon:
+            action = random.choice(env.valid_actions(state))
+        else:
+            # Combine to select action: sum Q1 + Q2
+            action = np.argmax(Q1[state] + Q2[state])
+
+        next_state, reward, done, _ = env.step(state, action)
+
+        if random.random() < 0.5:
+            # Update Q1
+            best_next = np.argmax(Q1[next_state])
+            target = reward + gamma * Q2[next_state][best_next] * (not done)
+            error = target - Q1[state][action]
+            Q1[state][action] += alpha * error
+        else:
+            # Update Q2
+            best_next = np.argmax(Q2[next_state])
+            target = reward + gamma * Q1[next_state][best_next] * (not done)
+            error = target - Q2[state][action]
+            Q2[state][action] += alpha * error
+
+        state = next_state
+        if done:
+            break
+
+    if epsilon > epsilon_min:
+        epsilon *= epsilon_decay
+\`\`\`
+
+### Key Features
+
+- **Action Selection**: Uses \`argmax(Q1[s] + Q2[s])\`, which tends to reduce overestimation
+- **Updates**: Randomly pick which table to update each step
+- **Storage Cost**: Twice the memory of Q-Learning, since we maintain two tables
+
+### 5.2.4 Deterministic Environment Results
+
+Even with fewer episodes (e.g., 5,000), Double Q-Learning converged to the optimal policy (max reward +185) in roughly the same number of steps. Because there is no stochastic noise in the deterministic layout, overestimation bias is minimal, and both methods perform equivalently.
+
+---
+
+## 6. Empirical Results & Analysis
+
+### 6.1 Deterministic Environment
+
+#### Q-Learning Performance
+- Converged to optimal policy after ~3,000 episodes
+- Average reward in final 1,000 episodes: +185
+- Average steps per episode: ~25
+- Success rate (deliver both packages within 500 steps): 100%
+
+#### Double Q-Learning Performance (5,000 episodes)
+- Converged near the same threshold (average final reward +185)
+- Average steps: ~25
+- Comparable performance to Q-Learning for a deterministic layout—overestimation bias has little to correct because transitions are fully predictable
+
+### 6.2 Stochastic Environment
+
+#### Hyperparameters
+- alpha = 0.1
+- gamma = 0.95  
+- epsilon_start = 1.0
+- epsilon_decay = 0.9999
+- epsilon_min = 0.01
+- episodes = 50,000
+- max_steps = 1,000
+
+#### Q-Learning Results
+- Evaluation over 20 test episodes (greedy policy): **18/20 successful deliveries**
+- Average Reward (last 1,000 training episodes): ~+135 (reduced from +185 due to wind/bird penalties and occasional forced detours)
+- Average Steps (successful episodes): ~35–45 (longer than deterministic due to random disruptions)
+
+#### Double Q-Learning Results (same 50,000 training episodes)
+- Evaluation over 20 test episodes: **9/20 successful deliveries**
+- Average Reward (last 1,000 training episodes): ~+130 (often overestimates values during learning, leading to suboptimal exploration)
+- Average Steps (successful episodes): ~40–55
+
+### 6.2.1 Analysis of Stochastic Performance
+
+#### Q-Learning's Edge
+- Even though Q-Learning can overestimate action values, in noisy environments the simultaneous selection and evaluation of actions allowed it to adapt faster to random changes (tornado movement, wind shifts, bird collisions)
+- Fast exploration (high ε) combined with gradual decay let Q-Learning sample many diverse scenarios, updating its Q-table more robustly
+
+#### Double Q-Learning's Challenges
+- By splitting updates between Q1 and Q2, each table received only half as many updates per episode
+- In high-variance transitions (wind pushes 70% of the time, bird collisions random), the decoupling slowed convergence—updates oscillated between two tables, leading to instability
+- Even after 50,000 episodes, many (state,action) pairs remained poorly estimated, causing greedy testing to fail in nearly half of the episodes
+
+**Key Takeaway**: For environments with moderate stochasticity (moving obstacles, random wind pushes), standard Q-Learning often outperforms Double Q-Learning unless the latter is trained for significantly more episodes or with tailored exploration strategies.
+
+---
+
+## 7. Reward Shaping and Its Impact
+
+### Initial Problems (Without Proper Penalty Shaping)
+
+During initial trials, the agent:
+- Wandered around the grid to avoid the tornado, incurring many step costs (–2 each)
+- Oscillated between two adjacent safe cells when confronted with wind cells (no penalty for repeating moves)
+- Attempted Random Drops/Pickups without learning the correct sequence
+
+### Implemented Shaping Terms
+
+1. **Step Penalty (–2)**: Encouraged shortest paths
+2. **Repeat-Move Penalty (–50)**: Prevented infinite loops between safe cells  
+3. **Invalid Action Penalties (–25 for out-of-bounds or invalid pickups)**: Reduced random action attempts
+
+### Results
+
+The agent quickly learned a policy that picks up the nearest package first, delivers it, then returns for the second package, achieving consistently high cumulative rewards. Balanced shaping avoided "reward hacking" (e.g., purposely hovering to avoid birds) while still guiding the drone toward meaningful actions.
+
+---
+
+## 8. Conclusions & Future Work
+
+### 8.1 Summary of Findings
+
+#### 1. Environment Design
+- A carefully specified 6×6 grid with deterministic and stochastic variants allowed us to test RL under predictable and unpredictable dynamics
+- Clear safety checks (grid bounds, no-fly zones, valid pick/drop) ensured the agent never took illegal actions
+
+#### 2. Reward System
+- A combination of high positive rewards (deliveries, pickups) and structured penalties (step cost, collision, invalid actions, repetition) led to a stable training signal
+- Without shaping, the agent either got stuck or produced suboptimal looping behaviors
+
+#### 3. Tabular RL Performance
+- **Deterministic Case**: Q-Learning and Double Q-Learning converged to optimal policies quickly, achieving +185 reward in ~25 steps
+- **Stochastic Case**: Q-Learning outperformed Double Q-Learning under the same training budget, achieving ~90% success in evaluation episodes, while Double Q-Learning reached only ~45%
+
+### 8.2 Lessons Learned
+
+- **Balance Exploration and Exploitation**: A decaying ε-greedy approach was sufficient, but in highly stochastic states, more sophisticated exploration (e.g., upper-confidence bounds) might help
+- **Reward Shaping Is Crucial**: Too few penalties yield wandering policies; too many harsh penalties can prevent any learning. Striking the right balance allowed consistent convergence
+- **Double Q-Learning Trade-Offs**: While it reduces overestimation bias, it requires approximately twice the samples (or more episodes) to converge to the same performance as standard Q-Learning—especially in high-variance settings
+
+### 8.3 Future Directions
+
+#### 1. Function Approximation (Deep RL)
+- Implement a Deep Q-Network (DQN) to generalize across similar grid states, reducing reliance on tabular storage (6,912 possible states)
+- Advantage Actor-Critic (A2C) or PPO could further handle continuous adaptations to moving tornado/bird
+
+#### 2. Hierarchical RL / Options
+- Define high-level "options" such as "navigate to package," "avoid tornado," and "deliver package"
+- A hierarchical policy might reduce sample complexity by reusing sub-policies
+
+#### 3. Risk-Sensitive Reward
+- Introduce risk-adjusted objectives (e.g., penalize frequent near-misses to tornado/bird more severely)
+- Measure variance of returns to encourage robust policies that minimize worst-case scenarios
+
+#### 4. Realistic Drone Dynamics
+- Replace grid-world with a continuous 2D plane and smooth dynamics (inertia, velocity)
+- Use a physics engine (e.g., PyBullet) to simulate wind turbulence, requiring continuous-action RL methods
 
 ## Conclusion
 
-The **LLM Preprocessing Pipeline** demonstrates a significant advancement in NLP data preprocessing capabilities, effectively leveraging distributed computing and advanced embedding techniques to accelerate and optimize large language model training processes. This project exemplifies how integrating cutting-edge AI/ML technologies with powerful distributed frameworks like Spark, Hadoop, and AWS EMR can deliver substantial performance improvements in processing large-scale textual datasets.
-`,
+By starting with a fully specified tabular RL environment, we built a solid foundation for exploring more advanced RL techniques in both deterministic and stochastic settings. The insights gained here about reward shaping, exploration strategies, and algorithm selection will directly inform the design of more scalable and real-world-applicable RL agents.
+
+---
+
+## References
+
+- [Gymnasium Toy Text Environments](https://gymnasium.farama.org/environments/toy_text/)
+- [Gymnasium Environment Creation Tutorial](https://gymnasium.farama.org/tutorials/gymnasium_basics/environment_creation/)
+- [Karpathy's Reinforce.js Tutorial](https://cs.stanford.edu/people/karpathy/reinforcejs/)`,
     },
   ],
 };

@@ -96,11 +96,11 @@ export default function Home() {
       <div className="w-full max-w-370">
         <h2 className="text-2xl font-semibold mb-6">Latest Projects</h2>
 
-        {portfolioData.projectsMetaData.map((item, idx) => (
+        {portfolioData.projectMetaData.map((item, idx) => (
           <BlogComponent
             key={item.id ?? idx}
             title={item.title}
-            intro={item.intro}
+            intro={item.excerpt}
             image={item.image}
             url={item.slug}
           />

@@ -15,7 +15,7 @@ const BlogComponent = ({
   return (
     <div className="flex flex-col md:flex-row w-full min-h-60 justify-between mb-4 border-b border-gray-200 pb-4">
       {/* thumbnail */}
-      <div className="order-1 md:order-2 w-full md:w-2/6 flex justify-center mb-6 md:mb-0">
+      <div className="order-1 md:order-2 w-full md:w-2/6 flex justify-center mb-6 md:mb-0 md:items-center">
         <img
           src={image}
           alt={`${title} thumbnail`}
@@ -25,7 +25,7 @@ const BlogComponent = ({
 
       {/* copy */}
       <div className="order-2 md:order-1 w-full md:w-4/6 px-2">
-        <h3 className="text-xl font-semibold mb-2 line-clamp-2">{title}</h3>
+        <h3 className="text-xl font-semibold mb-2 line-clamp-3">{title}</h3>
 
         <p className="mb-3">{intro}</p>
 
