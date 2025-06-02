@@ -17,7 +17,7 @@ export default async function ProjectDetails({ params }: PageProps) {
   if (!post) return notFound();
 
   return (
-    <article className="prose mx-auto max-w-3xl py-10">
+    <article className="prose mx-auto max-w-3xl md:py-50 p-4 py-40">
       {/* <h1>{post.title}</h1> */}
       <p className="text-sm text-gray-500">{post.date}</p>
       <Markdown>{post.content}</Markdown>

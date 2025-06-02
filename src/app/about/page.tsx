@@ -19,7 +19,7 @@ const tabData = [
   },
   { label: "Education", content: <EducationSection></EducationSection> },
   {
-    label: "Certifications",
+    label: "Achievements And Licences",
     content: <CertificateSection></CertificateSection>,
   },
 ];
@@ -42,7 +42,7 @@ export default function About() {
       <div className="flex flex-col md:flex-row w-full justify-center mb-16">
         {/* intro copy */}
         <div className="order-2 md:order-1 md:w-4/6 w-full max-w-[930px] px-4">
-          <h1 className="text-3xl font-bold mb-4">Hi, I&apos;m Jeswyn Jas!</h1>
+          <h1 className="text-3xl font-bold mb-4">Hi, I&apos;m {portfolioData.name}!</h1>
 
           {portfolioData.profileIntro.split("\n").map((line, i) =>
             line === "" ? (

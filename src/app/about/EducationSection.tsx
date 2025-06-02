@@ -7,9 +7,7 @@ const Section = styled.section`
   margin: 0 auto;
 `;
 
-const Header = styled.h2`
-
-`;
+const Header = styled.h2``;
 
 const Education = styled.div`
   margin-bottom: 2rem;
@@ -39,15 +37,21 @@ export default function EducationSection() {
 
       <Education>
         <EducationHeader>
-          <Institution>University Of Minnesota, Carlson School of Management</Institution>
-          <Meta>Master of Science, Business Analytics (STEM) &bull; Aug 2025 &bull; Minneapolis, MN</Meta>
+          <Institution>
+            University at Buffalo (UB), State University of New York
+          </Institution>
+          <Meta>
+            Master of Science in Computer Science & Engineering &bull; 2024 - Present &bull; USA
+          </Meta>
         </EducationHeader>
       </Education>
 
       <Education>
         <EducationHeader>
-          <Institution>National Institute Of Technology</Institution>
-          <Meta>Bachelor of Technology, Chemical Engineering &bull; Jun 2021 &bull; Raipur, India</Meta>
+          <Institution>Abdul Kalam Technical University</Institution>
+          <Meta>
+            Bachelor of Technology in Computer Science Engineering &bull; 2017 - 2021 &bull; India &bull; GPA: 8.13 / 10
+          </Meta>
         </EducationHeader>
       </Education>
     </Section>

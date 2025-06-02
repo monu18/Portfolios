@@ -71,7 +71,7 @@ export default function Home() {
       {/* intro copy */}
       <div className="order-2 md:order-1 md:w-4/6 w-full max-w-[930px] px-4">
         <h1 className="text-3xl font-bold mb-4">
-          Hi, I&apos;m Jeswyn Jas!
+          Hi, I&apos;m {portfolioData.name}!
         </h1>
 
         {portfolioData.profileIntro
