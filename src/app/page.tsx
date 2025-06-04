@@ -9,6 +9,26 @@ import portfolioData from "@/utils/portfolioData";
 // import TabsSelectView from "@/app/about/TabsSelectView";
 import BlogComponent from "@/components/BlogComponent";
 
+import { motion } from "framer-motion";
+
+const spinGradient = {
+  animate: {
+    rotate: 0,
+    transition: { repeat: Infinity, ease: "linear", duration: 8 },
+  },
+};
+
+const pulseRing = {
+  animate: {
+    scale: [1, 1.08, 1],
+    opacity: [1, 0.6, 1],
+    transition: {
+      repeat: Infinity,
+      duration: 4,
+      ease: "easeInOut",
+    },
+  },
+};
 
 export default function Home() {
   useEffect(() => {
@@ -83,12 +103,27 @@ export default function Home() {
 
       {/* profile image */}
       <div className="order-1 md:order-2 md:w-2/6 w-full flex justify-center items-center mb-8 md:mb-0">
+      {/* —— Rotating rainbow ring —— */}
+      <motion.span
+        variants={spinGradient}
+        animate="animate"
+        className="relative inline-flex rounded-full p-[4px] before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-gradient-to-tr before:from-yellow-400 before:via-lime-400 before:to-emerald-500"
+      >
+        {/* —— Breathing glass ring —— */}
+        <motion.span
+          variants={pulseRing}
+          animate="animate"
+          className="absolute inset-0 rounded-full ring-2 ring-white/60 backdrop-blur-md"
+        />
+
+        {/* —— Actual avatar —— */}
         <img
           src="/profile.png"
-          alt="Jeswyn Jas profile photo"
-          className="w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full object-cover"
+          alt="profile photo"
+          className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-80 md:h-80 rounded-full object-cover"
         />
-      </div>
+      </motion.span>
+    </div>
     </div>
 
     {/* ---------- LATEST PROJECTS ---------- */}

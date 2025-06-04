@@ -35,22 +35,26 @@ export default function EducationSection() {
     <Section>
       <Header>Education</Header>
 
+      {/* University at Buffalo */}
       <Education>
         <EducationHeader>
           <Institution>
-            University at Buffalo (UB), State University of New York
+            University at Buffalo (UB), State&nbsp;University&nbsp;of&nbsp;New&nbsp;York
           </Institution>
           <Meta>
-            Master of Science in Computer Science & Engineering &bull; 2024 - Present &bull; USA
+            Master of Science in Computer Science&nbsp;&amp;&nbsp;Engineering &bull; Aug&nbsp;2024&nbsp;&ndash;&nbsp;Dec&nbsp;2025 &bull; USA &bull; GPA&nbsp;3.8&nbsp;/&nbsp;4
           </Meta>
         </EducationHeader>
       </Education>
 
+      {/* National Institute of Technology Raipur */}
       <Education>
         <EducationHeader>
-          <Institution>Abdul Kalam Technical University</Institution>
+          <Institution>
+            National&nbsp;Institute&nbsp;of&nbsp;Technology&nbsp;Raipur
+          </Institution>
           <Meta>
-            Bachelor of Technology in Computer Science Engineering &bull; 2017 - 2021 &bull; India &bull; GPA: 8.13 / 10
+            Bachelor of Technology in Biomedical Engineering &bull; Jul&nbsp;2017&nbsp;&ndash;&nbsp;May&nbsp;2021 &bull; India &bull; GPA&nbsp;7.47&nbsp;/&nbsp;10
           </Meta>
         </EducationHeader>
       </Education>

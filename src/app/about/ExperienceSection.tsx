@@ -64,122 +64,89 @@ export default function ExperienceSection() {
     <Section>
       <Header>Experience</Header>
 
+      {/* Optum */}
       <Job>
         <JobHeader>
           <Company>Optum</Company>
-          <Meta>Software Engineer &bull; Noida, Uttar Pradesh &bull; Aug 2021 - Aug 2024</Meta>
+          <Meta>
+            Software Engineer &bull; Noida, Uttar&nbsp;Pradesh &bull; Dec&nbsp;2021&nbsp;&ndash;&nbsp;Aug&nbsp;2024
+          </Meta>
         </JobHeader>
         <List>
           <ListItem>
-            Contributed to the Provider Data Commons project, focused on creating a real-time
-            provider directory using data sourced from the NDB.
+            Consolidated 15 legacy behavioral-health systems into a single, cloud-native architecture,
+            projected to reduce annual operating costs by&nbsp;$1.4&nbsp;M.
           </ListItem>
           <ListItem>
-            Developed streaming components to enhance platform responsiveness, enabling real-time
-            provider data access for consumers.
+            Built HIPAA-compliant UI components, an internal announcement dashboard, and a robust
+            provider-search feature using Angular, NestJS, GraphQL, and PostgreSQL.
           </ListItem>
           <ListItem>
-            Designed and implemented batch ingestion processes using Shell scripts to transfer data
-            to Amazon S3, improving data latency and update efficiency.
+            Led Spring&nbsp;Boot APIs for SMS outreach and third-party integrations; executed data
+            migrations with Kafka, OpenLens, JDBC, and custom Java console utilities.
           </ListItem>
           <ListItem>
-            Created and optimized Apache Spark jobs on AWS EMR to perform data aggregation on S3 and
-            load processed data into Amazon RDS via Lambda functions and Step Functions.
+            Implemented centralized event tracking: Snowflake for storage, Splunk for logs, and
+            Grafana for visualization, boosting platform observability.
           </ListItem>
           <ListItem>
-            Handled development, testing, and monitoring for batch feeds, data factories, and
-            translators related to provider directories.
-          </ListItem>
-          <ListItem>
-            Deployed applications across environments using CI/CD pipelines with Jenkins, ensuring
-            seamless integration and delivery.
-          </ListItem>
-          <ListItem>
-            Maintained PDC’s coding standards and supported innovation in big data workflows to adapt
-            to evolving business requirements.
+            Partnered with U.S. operations teams to triage and resolve production incidents,
+            maintaining a&nbsp;user-reported defect rate below&nbsp;1 %.
           </ListItem>
         </List>
 
         <Achievements>Achievements</Achievements>
         <List>
           <ListItem>
-            Received top performance ratings for ownership, execution, and quality of feature
-            delivery.
+            Earned consecutive 5-star performance ratings (2021-2024) for ownership and technical
+            precision.
           </ListItem>
           <ListItem>
-            Recognized with multiple Bravo awards for taking the lead and successfully migrating
-            Kafka topics from Cassandra to AWS, enhancing the reliability and scalability of team
-            repositories.
+            Received multiple Bravo awards for migrating Kafka topics from Azure to Google Cloud
+            Platform, enhancing reliability and scalability.
           </ListItem>
         </List>
       </Job>
 
-      {/* 
+      {/* Grojha */}
       <Job>
         <JobHeader>
-          <Company>Uber</Company>
-          <Meta>Senior Data Analyst &bull; Hyderabad, IN &bull; Aug 2022 - Jul 2024</Meta>
+          <Company>Grojha</Company>
+          <Meta>
+            Co-Founder &bull; Kolkata, West&nbsp;Bengal &bull; Jun&nbsp;2021&nbsp;&ndash;&nbsp;Dec&nbsp;2021
+          </Meta>
         </JobHeader>
         <List>
           <ListItem>
-            Designed and deployed automated payment ETL pipelines in Python to integrate 12+ data
-            sources, streamlining operations across Taiwan and Japan, saving 400+ annual operational
-            hours, and uncovering fee corrections generating $60K in additional revenue.
+            Launched a digital marketplace connecting neighborhood shopkeepers with customers during
+            COVID-19 lockdowns.
           </ListItem>
           <ListItem>
-            Led a team of 3 analysts in roadmap prioritization and conducted A/B testing on incentive
-            campaigns using exploratory analysis and statistical modeling, driving market expansion
-            and revamping city launch strategies.
+            Shipped three Flutter mobile apps and a management dashboard backed by Firebase, Google
+            Maps, and Android to enable real-time vendor listings and order tracking.
           </ListItem>
           <ListItem>
-            Spearheaded KPI tracking model using SQL & Python to monitor lead-to-driver funnel
-            conversion, streamlining onboarding processes and contributing to a $1.2B+ revenue pipeline
-            critical for Uber's growth.
+            Owned the full product lifecycle from design to Google Play deployment, covering vendor
+            onboarding, customer orders, and delivery management.
           </ListItem>
           <ListItem>
-            Collaborated with cross-functional teams to launch a Market Intelligence Dashboard in
-            Data Studio, supporting competitive benchmarking and industry analysis of Uber's top
-            competitors in the US and Canada.
+            Coordinated on-ground operations with 30 + local stores, iterating on logistics and user
+            support for rapid market penetration.
           </ListItem>
         </List>
-      </Job>
 
-      <Job>
-        <JobHeader>
-          <Company>Fractal Analytics</Company>
-          <Meta>Data Science Analyst &bull; Bangalore, IN &bull; Aug 2021 - Jul 2022</Meta>
-        </JobHeader>
+        <Achievements>Achievements</Achievements>
         <List>
           <ListItem>
-            Conducted exploratory data analysis (EDA) on purchasing data to identify seasonal trends
-            and anomalies and built a regression model for medium-term sales forecasting, improving
-            demand planning accuracy by 35%.
+            Completed 500 + deliveries and onboarded 30 + vendors in just three months, generating
+            over ₹ 12,500 in revenue.
           </ListItem>
           <ListItem>
-            Enhanced SQL scripts to extract 500+ unstructured blueprints from DynamoDB, mapping them
-            to structured milestone data in RDS, facilitating data-driven decisions with 97% accuracy
-            in reconstructing lost data via imputation techniques.
-          </ListItem>
-          <ListItem>
-            Initiated and maintained PowerBI dashboards, restructuring monthly business review reports
-            across 50+ global markets across US & C.
+            Grew the “Grojha” and “Grojha Retail” apps to 100 + and 50 + active users,
+            respectively.
           </ListItem>
         </List>
       </Job>
-
-      <Job>
-        <JobHeader>
-          <Company>Data Analytics Trainee</Company>
-          <Meta>May 2021 - Jun 2021</Meta>
-        </JobHeader>
-        <List>
-          <ListItem>
-            Identified and resolved data gaps from creation to business intelligence dashboards,
-            ensuring 98% accurate data troubleshooting.
-          </ListItem>
-        </List>
-      </Job>
-      */}
     </Section>
   );
 }

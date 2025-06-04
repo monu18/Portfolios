@@ -9,11 +9,11 @@ const Section = styled.section`
 
 const Header = styled.h2``;
 
-const Education = styled.div`
+const Block = styled.div`
   margin-bottom: 2rem;
 `;
 
-const EducationHeader = styled.div`
+const BlockHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -26,6 +26,15 @@ const Institution = styled.h3`
   width: 100%;
 `;
 
+/* ----------  NEW LINK STYLE  ---------- */
+const StyledLink = styled.a`
+  color: #1a73e8;              /* Google-blue */
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    color: #0b57d0;            /* Slightly darker on hover */
+  }
+`;
 
 const List = styled.ul`
   margin-top: 0.5rem;
@@ -53,43 +62,102 @@ const ListItem = styled.li`
 export default function CertificationSection() {
   return (
     <Section>
-      <Header>Achievements and Licences</Header>
+      <Header>Achievements &amp; Certifications</Header>
 
-      <Education>
-        <EducationHeader>
-          <Institution>National Judo Competition</Institution>
-          <List>
-            <ListItem>
-              Secured 3rd rank in the National Judo Competition, recognized by
-              the Ministry of Education (Department of School Education and
-              Literacy), Government of India.
-            </ListItem>
-          </List>
-        </EducationHeader>
-      </Education>
+      {/* ACHIEVEMENTS */}
+      <Block>
+        <BlockHeader>
+          <Institution>Community Involvement</Institution>
+        </BlockHeader>
+        <List>
+          <ListItem>
+            Executive&nbsp;Member at{" "}
+            <StyledLink
+              href="https://magadh-misson-foundation.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Magadh Mission Foundation
+            </StyledLink>
+            , an NGO providing education and health-awareness programs in
+            Delhi-NCR.
+          </ListItem>
+        </List>
+      </Block>
 
-      <Education>
-        <EducationHeader>
-          <Institution>National Youth Parliament Competition</Institution>
-          <List>
-            <ListItem>
-              Awarded a Special Prize for meritorious performance in the Youth
-              Parliament Competition organized by the Government of India.
-            </ListItem>
-          </List>
-        </EducationHeader>
-      </Education>
+      {/* CERTIFICATIONS */}
+      <Block>
+        <BlockHeader>
+          <Institution>Professional Certifications</Institution>
+        </BlockHeader>
+        <List>
+          <ListItem>
+            <StyledLink
+              href="https://www.coursera.org/account/accomplishments/verify/CC3JW93LMA9G"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Object-Oriented Programming in Java
+            </StyledLink>{" "}
+            — UC San Diego (Coursera) • Dec 15 2023
+          </ListItem>
 
-      <Education>
-        <EducationHeader>
-          <Institution>National Cadet Corps</Institution>
-          <List>
-            <ListItem>
-              Certified participant in the National Cadet Corps program.
-            </ListItem>
-          </List>
-        </EducationHeader>
-      </Education>
+          <ListItem>
+            <StyledLink
+              href="https://www.coursera.org/account/accomplishments/verify/BTK9VG4H2587"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Data Structures
+            </StyledLink>{" "}
+            — UC San Diego (Coursera) • Dec 12 2023
+          </ListItem>
+
+          <ListItem>
+            <StyledLink
+              href="https://www.coursera.org/account/accomplishments/verify/WV7XBQ2DL952"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Algorithmic Toolbox
+            </StyledLink>{" "}
+            — UC San Diego (Coursera) • Dec 12 2023
+          </ListItem>
+
+          <ListItem>
+            <StyledLink
+              href="https://www.coursera.org/account/accomplishments/verify/YFEWQT7N88LP"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Operating Systems and You: Becoming a Power User
+            </StyledLink>{" "}
+            — Google (Coursera) • Dec 16 2023
+          </ListItem>
+
+          <ListItem>
+            <StyledLink
+              href="https://www.coursera.org/account/accomplishments/verify/P9K2Z76BLKE3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The Bits &amp; Bytes of Computer Networking
+            </StyledLink>{" "}
+            — Google (Coursera) • Dec 15 2023
+          </ListItem>
+
+          <ListItem>
+            <StyledLink
+              href="https://www.udemy.com/certificate/UC-32f23f3c-e3ca-4657-86ac-a65021474e7c/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Java Masterclass
+            </StyledLink>{" "}
+            — Udemy • Dec 01 2020
+          </ListItem>
+        </List>
+      </Block>
     </Section>
   );
 }
