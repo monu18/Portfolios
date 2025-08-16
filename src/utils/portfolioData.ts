@@ -1,7 +1,7 @@
 // src/data/portfolioData.ts
 
 const portfolioData = {
-  name: "Suman Saurav",
+  name: "Smruti Vyas Manoj",
   title: "Data Scientist | Business Analyst",
   location: "Chicago, IL",
   email: "ssaurav@buffalo.edu",

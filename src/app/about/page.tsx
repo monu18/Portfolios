@@ -1,6 +1,6 @@
 "use client";
 
-// import { db } from "@/firebase";
+// import { db } from "@/lib/firebase.client";
 // import { collection, getDocs } from "firebase/firestore";
 // import Image from "next/image";
 // import { useEffect } from "react";
