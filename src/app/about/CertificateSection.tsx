@@ -13,18 +13,6 @@ const Block = styled.div`
   margin-bottom: 2rem;
 `;
 
-const BlockHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-`;
-
-const Institution = styled.h3`
-  margin: 0;
-  color: #222;
-  width: 100%;
-`;
 
 /* ----------  NEW LINK STYLE  ---------- */
 const StyledLink = styled.a`
@@ -62,10 +50,10 @@ const ListItem = styled.li`
 export default function CertificationSection() {
   return (
     <Section>
-      <Header>Achievements &amp; Certifications</Header>
+      <Header>Certification</Header>
 
       {/* ACHIEVEMENTS */}
-      <Block>
+      {/* <Block>
         <BlockHeader>
           <Institution>Community Involvement</Institution>
         </BlockHeader>
@@ -83,13 +71,10 @@ export default function CertificationSection() {
             Delhi-NCR.
           </ListItem>
         </List>
-      </Block>
+      </Block> */}
 
       {/* CERTIFICATIONS */}
       <Block>
-        <BlockHeader>
-          <Institution>Professional Certifications</Institution>
-        </BlockHeader>
         <List>
           <ListItem>
             <StyledLink
@@ -97,64 +82,9 @@ export default function CertificationSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Object-Oriented Programming in Java
+              Accounting System Structure and Information Managemen
             </StyledLink>{" "}
-            — UC San Diego (Coursera) • Dec 15 2023
-          </ListItem>
-
-          <ListItem>
-            <StyledLink
-              href="https://www.coursera.org/account/accomplishments/verify/BTK9VG4H2587"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Data Structures
-            </StyledLink>{" "}
-            — UC San Diego (Coursera) • Dec 12 2023
-          </ListItem>
-
-          <ListItem>
-            <StyledLink
-              href="https://www.coursera.org/account/accomplishments/verify/WV7XBQ2DL952"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Algorithmic Toolbox
-            </StyledLink>{" "}
-            — UC San Diego (Coursera) • Dec 12 2023
-          </ListItem>
-
-          <ListItem>
-            <StyledLink
-              href="https://www.coursera.org/account/accomplishments/verify/YFEWQT7N88LP"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Operating Systems and You: Becoming a Power User
-            </StyledLink>{" "}
-            — Google (Coursera) • Dec 16 2023
-          </ListItem>
-
-          <ListItem>
-            <StyledLink
-              href="https://www.coursera.org/account/accomplishments/verify/P9K2Z76BLKE3"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              The Bits &amp; Bytes of Computer Networking
-            </StyledLink>{" "}
-            — Google (Coursera) • Dec 15 2023
-          </ListItem>
-
-          <ListItem>
-            <StyledLink
-              href="https://www.udemy.com/certificate/UC-32f23f3c-e3ca-4657-86ac-a65021474e7c/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Java Masterclass
-            </StyledLink>{" "}
-            — Udemy • Dec 01 2020
+            — New York Institute of Finance • Dec 2022
           </ListItem>
         </List>
       </Block>

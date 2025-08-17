@@ -35,26 +35,26 @@ export default function EducationSection() {
     <Section>
       <Header>Education</Header>
 
-      {/* University at Buffalo */}
+      {/* University of Illinois */}
       <Education>
         <EducationHeader>
           <Institution>
-            University at Buffalo (UB), State&nbsp;University&nbsp;of&nbsp;New&nbsp;York
+            University of Illinois at Chicago, IL
           </Institution>
           <Meta>
-            Master of Science in Computer Science&nbsp;&amp;&nbsp;Engineering &bull; Aug&nbsp;2024&nbsp;&ndash;&nbsp;Dec&nbsp;2025 &bull; USA &bull; GPA&nbsp;3.8&nbsp;/&nbsp;4
+            <b>Master of Finance &nbsp; &bull; &nbsp; Aug&nbsp;2024&nbsp;&ndash;&nbsp;May&nbsp;2025 &nbsp; &bull; &nbsp; United States &nbsp;&bull; &nbsp;GPA&nbsp;4&nbsp;/&nbsp;4</b>
           </Meta>
         </EducationHeader>
       </Education>
 
-      {/* National Institute of Technology Raipur */}
+      {/* Mount Carmel College, Bengaluru, India */}
       <Education>
         <EducationHeader>
           <Institution>
-            National&nbsp;Institute&nbsp;of&nbsp;Technology&nbsp;Raipur
+            Mount Carmel College, Bengaluru, India
           </Institution>
           <Meta>
-            Bachelor of Technology in Biomedical Engineering &bull; Jul&nbsp;2017&nbsp;&ndash;&nbsp;May&nbsp;2021 &bull; India &bull; GPA&nbsp;7.47&nbsp;/&nbsp;10
+            <b>Bachelor of Commerce - Accounting and Finance &nbsp; &bull; &nbsp; Jul&nbsp;2020&nbsp;&ndash;&nbsp;May&nbsp;2023 &nbsp; &bull; &nbsp; India &nbsp; &bull;&nbsp;  GPA&nbsp;-&nbsp;/&nbsp;10</b>
           </Meta>
         </EducationHeader>
       </Education>

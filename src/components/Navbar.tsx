@@ -12,18 +12,12 @@ import portfolioData from "@/utils/portfolioData";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
+  // { href: "/blog", label: "Blog" },
   { href: "/project", label: "Project" },
-  { href: "/publications", label: "Publications" },
+  // { href: "/publications", label: "Publications" },
   {
     href: portfolioData.resume,
     label: "Resume",
-    external: true,
-    icon: "/share.svg",
-  },
-  {
-    href: portfolioData.social.github, // update to real URL
-    label: "GitHub",
     external: true,
     icon: "/share.svg",
   },
