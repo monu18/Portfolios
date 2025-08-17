@@ -64,86 +64,55 @@ export default function ExperienceSection() {
     <Section>
       <Header>Experience</Header>
 
-      {/* Optum */}
+      {/* University of Illinois */}
       <Job>
         <JobHeader>
-          <Company>Optum</Company>
+          <Company>University of Illinois</Company>
           <Meta>
-            Software Engineer &bull; Noida, Uttar&nbsp;Pradesh &bull; Dec&nbsp;2021&nbsp;&ndash;&nbsp;Aug&nbsp;2024
+            <b>Financial Markets & Investment Analyst &bull; Chicago, IL &bull; Jan&nbsp;2025&nbsp;&ndash;&nbsp;May&nbsp;2025</b>
           </Meta>
         </JobHeader>
         <List>
           <ListItem>
-            Consolidated 15 legacy behavioral-health systems into a single, cloud-native architecture,
-            projected to reduce annual operating costs by&nbsp;$1.4&nbsp;M.
+            Created Excel-based financial modeling templates and analytical frameworks for investment valuation and portfolio analysis coursework.
           </ListItem>
           <ListItem>
-            Built HIPAA-compliant UI components, an internal announcement dashboard, and a robust
-            provider-search feature using Angular, NestJS, GraphQL, and PostgreSQL.
-          </ListItem>
-          <ListItem>
-            Led Spring&nbsp;Boot APIs for SMS outreach and third-party integrations; executed data
-            migrations with Kafka, OpenLens, JDBC, and custom Java console utilities.
-          </ListItem>
-          <ListItem>
-            Implemented centralized event tracking: Snowflake for storage, Splunk for logs, and
-            Grafana for visualization, boosting platform observability.
-          </ListItem>
-          <ListItem>
-            Partnered with U.S. operations teams to triage and resolve production incidents,
-            maintaining a&nbsp;user-reported defect rate below&nbsp;1 %.
+            Provided technical support to students on Python and R statistical applications for financial data analysis and risk assessment.
           </ListItem>
         </List>
 
         <Achievements>Achievements</Achievements>
         <List>
           <ListItem>
-            Earned consecutive 5-star performance ratings (2021-2024) for ownership and technical
-            precision.
-          </ListItem>
-          <ListItem>
-            Received multiple Bravo awards for migrating Kafka topics from Azure to Google Cloud
-            Platform, enhancing reliability and scalability.
+            Designed Excel-based valuation templates that improved class portfolio analysis efficiency by 30%.
           </ListItem>
         </List>
       </Job>
 
-      {/* Grojha */}
+      {/* Verbinden Communication Pvt Ltd */}
       <Job>
         <JobHeader>
-          <Company>Grojha</Company>
+          <Company>Verbinden Communication Pvt Ltd</Company>
           <Meta>
-            Co-Founder &bull; Kolkata, West&nbsp;Bengal &bull; Jun&nbsp;2021&nbsp;&ndash;&nbsp;Dec&nbsp;2021
+            <b>Jr Financial Analyst &bull; Bengaluru, India &bull; May&nbsp;2023&nbsp;&ndash;&nbsp;Apr&nbsp;2024</b>
           </Meta>
         </JobHeader>
         <List>
           <ListItem>
-            Launched a digital marketplace connecting neighborhood shopkeepers with customers during
-            COVID-19 lockdowns.
+            Utilized NetSuite ERP to extract and analyze financial data, supporting financial modeling and variance analysis for budgeting, forecasting, and capital allocation decisions.
           </ListItem>
           <ListItem>
-            Shipped three Flutter mobile apps and a management dashboard backed by Firebase, Google
-            Maps, and Android to enable real-time vendor listings and order tracking.
-          </ListItem>
-          <ListItem>
-            Owned the full product lifecycle from design to Google Play deployment, covering vendor
-            onboarding, customer orders, and delivery management.
-          </ListItem>
-          <ListItem>
-            Coordinated on-ground operations with 30 + local stores, iterating on logistics and user
-            support for rapid market penetration.
+            Analyzed company financial data and prepared detailed reports on revenue performance, cost structures, and profitability trends for management review.
           </ListItem>
         </List>
 
         <Achievements>Achievements</Achievements>
         <List>
           <ListItem>
-            Completed 500 + deliveries and onboarded 30 + vendors in just three months, generating
-            over ₹ 12,500 in revenue.
+            Automated variance analysis reporting in NetSuite ERP, reducing manual reporting time by 45%.
           </ListItem>
           <ListItem>
-            Grew the “Grojha” and “Grojha Retail” apps to 100 + and 50 + active users,
-            respectively.
+            Delivered executive-ready revenue & cost reports, influencing a budget reallocation that improved profitability.
           </ListItem>
         </List>
       </Job>

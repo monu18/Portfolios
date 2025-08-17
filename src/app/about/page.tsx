@@ -35,13 +35,13 @@ const pulseRing = {
 };
 
 const tabData = [
+  { label: "Education", content: <EducationSection></EducationSection> },
   {
     label: "Experience",
     content: <ExperienceSection></ExperienceSection>,
   },
-  { label: "Education", content: <EducationSection></EducationSection> },
   {
-    label: "Achievements & Certifications",
+    label: "Certifications",
     content: <CertificateSection></CertificateSection>,
   },
 ];
