@@ -78,7 +78,7 @@ export default function CertificationSection() {
         <List>
           <ListItem>
             <StyledLink
-              href="https://www.coursera.org/account/accomplishments/verify/CC3JW93LMA9G"
+              href="https://drive.google.com/file/d/1m4vD1x6uuy7syREcp5uUu_UF3bJGTwH9/view"
               target="_blank"
               rel="noopener noreferrer"
             >
