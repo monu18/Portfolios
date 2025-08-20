@@ -7,7 +7,7 @@ const portfolioData = {
   email: "smrutivyas66@gmail.com",
   phone: "(312) 358-2156",
   resume:
-    "https://drive.google.com/file/d/1M4DrykJAbQjJdiR-vYVht4A5QgyZ6_IC/view?usp=sharing",
+    "https://drive.google.com/file/d/1ElLLcP4SKi4wRlniMWS9e_x5o-sRAu1I/view?usp=sharing",
 
   profileIntro:
     "I’m Smruti Vyas, a Master of Finance graduate from the University of Illinois Chicago with a strong background in quantitative analysis, risk modeling, and financial reporting. I have hands-on experience with NetSuite ERP, Python, R, SQL, and Power BI, and I specialize in turning complex financial data into clear, actionable insights. \n\n My professional journey includes working as a Junior Financial Analyst at Verbinden Communication, where I supported budgeting, forecasting, and variance analysis using ERP-driven financial reporting. At UIC, I served as a Financial Markets & Investment Analyst, where I developed Excel-based financial modeling templates and valuation frameworks for portfolio analysis. I also provided technical training and support to students on using Python and R for statistical modeling, financial data analysis, and risk assessment—strengthening both analytical rigor and decision-making skills. \n\n I’m passionate about combining finance, data, and technology to solve real-world problems—whether it’s building credit risk models, improving forecasting accuracy, or creating data-driven dashboards. \n\n I’m seeking opportunities where I can apply my analytical mindset, technical expertise, and collaborative spirit to drive smarter financial decisions.",
