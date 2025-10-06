@@ -1,7 +1,4 @@
 "use client";
-
-import { db } from "@/lib/firebase.client";
-import { collection, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
 
 import portfolioData from "@/utils/portfolioData";
@@ -31,16 +28,6 @@ const pulseRing = {
 };
 
 export default function Home() {
-  useEffect(() => {
-    const fetchData = async () => {
-      const querySnapshot = await getDocs(collection(db, "test"));
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, doc.data());
-      });
-    };
-
-    fetchData();
-  }, []);
 
   // return (
   //   <main className="mt-24 p-4 w-100%">

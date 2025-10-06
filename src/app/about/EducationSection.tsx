@@ -7,7 +7,9 @@ const Section = styled.section`
   margin: 0 auto;
 `;
 
-const Header = styled.h2``;
+const Header = styled.h2`
+
+`;
 
 const Education = styled.div`
   margin-bottom: 2rem;
@@ -35,27 +37,17 @@ export default function EducationSection() {
     <Section>
       <Header>Education</Header>
 
-      {/* University of Illinois */}
       <Education>
         <EducationHeader>
-          <Institution>
-            University of Illinois at Chicago, IL
-          </Institution>
-          <Meta>
-            <b>Master of Finance &nbsp; &bull; &nbsp; Aug&nbsp;2024&nbsp;&ndash;&nbsp;May&nbsp;2025 &nbsp; &bull; &nbsp; United States &nbsp;&bull; &nbsp;GPA&nbsp;4&nbsp;/&nbsp;4</b>
-          </Meta>
+          <Institution>University Of Minnesota, Carlson School of Management</Institution>
+          <Meta>Master of Science, Business Analytics (STEM) &bull; Aug 2025 &bull; Minneapolis, MN</Meta>
         </EducationHeader>
       </Education>
 
-      {/* Mount Carmel College, Bengaluru, India */}
       <Education>
         <EducationHeader>
-          <Institution>
-            Mount Carmel College, Bengaluru, India
-          </Institution>
-          <Meta>
-            <b>Bachelor of Commerce - Accounting and Finance &nbsp; &bull; &nbsp; Jul&nbsp;2020&nbsp;&ndash;&nbsp;May&nbsp;2023 &nbsp; &bull; &nbsp; India &nbsp; &bull;&nbsp;  GPA&nbsp;-&nbsp;/&nbsp;10</b>
-          </Meta>
+          <Institution>Savitribai Phule Pune University</Institution>
+          <Meta>Bachelor of Technology, Computer Science Engineering &bull; May 2023 &bull; Pune, India</Meta>
         </EducationHeader>
       </Education>
     </Section>
