@@ -6,6 +6,7 @@
 // import { useEffect } from "react";
 
 //  before:from-pink-500 before:via-purple-500 before:to-indigo-500
+// import Image from 'next/image';
 
 import portfolioData from "@/utils/portfolioData";
 // import Chip from "@/components/Chip";
