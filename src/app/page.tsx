@@ -6,16 +6,20 @@ import portfolioData from "@/utils/portfolioData";
 // import TabsSelectView from "@/app/about/TabsSelectView";
 import BlogComponent from "@/components/BlogComponent";
 
-import { motion } from "framer-motion";
+import { Variants } from "framer-motion";
 
-const spinGradient = {
+const spinGradient: Variants = {
   animate: {
-    rotate: 0,
-    transition: { repeat: Infinity, ease: "linear", duration: 8 },
+    rotate: 360, // Change to 360 for full rotation
+    transition: { 
+      repeat: Infinity, 
+      ease: "linear", 
+      duration: 8 
+    },
   },
 };
 
-const pulseRing = {
+const pulseRing: Variants = {
   animate: {
     scale: [1, 1.08, 1],
     opacity: [1, 0.6, 1],
