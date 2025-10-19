@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 import portfolioData from "@/utils/portfolioData";
 // import Chip from "@/components/Chip";
