@@ -18,7 +18,7 @@ const portfolioData = {
       slug: "retrieval-ready-rolicy-nlp",
       intro:
         "The Smart Admissions Assistant is a Retrieval-Augmented Generation (RAG) chatbot system designed to revolutionize how prospective students interact with institutional admissions information. By combining OpenAI's advanced language models with efficient semantic search capabilities, this project creates an intelligent assistant that provides accurate, document-grounded responses to student queries about the admissions process. The implementation achieved an 80% reduction in query resolution time and maintains over 95% response accuracy through systematic document citation, demonstrating the practical effectiveness of RAG architectures in educational technology applications.",
-      image: "project_1.jpeg",
+      image: "/project_1.jpeg",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const portfolioData = {
       slug: "predictive-success-modeling",
       intro:
         "The Geospatial Credit Risk Modeling project applies advanced unsupervised learning techniques to segment subprime and thin-file credit applicants using geospatial clustering. By implementing DBSCAN on customer geolocation data enriched with socioeconomic features, this project identified four distinct risk profiles with a silhouette score of 0.53. Integration with XGBoost predictive modeling achieved an AUC-ROC of 0.74, representing a 9% improvement over baseline models. The implementation reduced portfolio default rates by 18% while increasing approval rates for lower-risk segments by 23%, demonstrating effective balance between risk management and financial inclusion.",
-      image: "project_2.jpeg",
+      image: "/project_1.jpeg",
     },
     {
       id: 3,
@@ -35,7 +35,7 @@ const portfolioData = {
       slug: "sentiment-sphere-real-time-sentiment-analysis",
       intro:
         "The Real-Time American Sign Language Interpreter is a computer vision and deep learning system designed to bridge communication barriers for deaf and mute individuals. By implementing a multi-model Convolutional Neural Network architecture trained on custom captured datasets, this project translates ASL fingerspelling gestures into English text in real-time using standard webcam input. The implementation achieved 99.3% classification accuracy across all 26 English alphabets through an innovative hierarchical model approach that addresses visual ambiguity in similar hand signs. The research findings were published in the International Journal for Research in Applied Science & Engineering Technology, contributing to the academic discourse on accessible assistive technologies.",
-      image: "project_3.jpeg",
+      image: "/project_1.jpeg",
     },
     {
       id: 4,
@@ -43,7 +43,7 @@ const portfolioData = {
       slug: "llm-preprocessing-pipeline",
       intro:
         "The Market Basket Analysis project focuses on transforming large-scale grocery transaction data into actionable cross-sell insights. Using a dataset of over 3 million Instacart transactions, the project applied association rule mining techniques to uncover product affinity patterns and translate them into real-time recommendations through a lightweight, interactive Streamlit application. The end-to-end solution demonstrated how retail organizations can drive larger basket sizes and increase sales through intelligent data-driven recommendations without relying on heavy infrastructure.",
-      image: "project_4.jpeg",
+      image: "/project_1.jpeg",
     },
   ],
 

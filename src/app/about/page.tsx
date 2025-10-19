@@ -13,7 +13,7 @@ import TabsSelectView from "@/app/about/TabsSelectView";
 import ExperienceSection from "@/app/about/ExperienceSection";
 import EducationSection from "@/app/about/EducationSection";
 import CertificateSection from "./CertificateSection";
-import { Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const spinGradient: Variants = {
   animate: {

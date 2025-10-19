@@ -6,7 +6,7 @@ import portfolioData from "@/utils/portfolioData";
 // import TabsSelectView from "@/app/about/TabsSelectView";
 import BlogComponent from "@/components/BlogComponent";
 
-import { Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const spinGradient: Variants = {
   animate: {
