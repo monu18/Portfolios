@@ -6,6 +6,7 @@ const portfolioData = {
   location: "Boston, MA",
   email: "ishaan.bhutada@gmail.com",
   phone: "(339) 242-2610",
+  publications: [],
   resume:
     "https://drive.google.com/file/d/1ElLLcP4SKi4wRlniMWS9e_x5o-sRAu1I/view?usp=sharing",
 
@@ -802,7 +803,6 @@ The synergy of Vector Databases and Large Language Models offers vast potential 
     {
       id: 1,
       image: "project_1.jpeg",
-      publications: [],
       slug: "retrieval-ready-rolicy-nlp",
       title: "Smart Admissions Assistant: RAG-Powered Chatbot",
       date: "2025-05-01",
@@ -981,7 +981,6 @@ Its modular, citation-driven architecture establishes a benchmark for AI-assiste
     {
       id: 2,
       image: "project_1.jpeg",
-      publications: [],
       slug: "predictive-success-modeling",
       title: "Geospatial Credit Risk Modeling: DBSCAN Clustering for Subprime Segmentation",
       date: "2025-04-19",
@@ -1067,7 +1066,6 @@ This project demonstrates the effective application of density-based clustering 
     {
       id: 3,
       image: "project_1.jpeg",
-      publications: [],
       slug: "sentiment-sphere-real-time-sentiment-analysis",
       title: "Sentiment Sphere: Real-Time Sentiment Analysis",
       date: "2025-04-19",
@@ -1205,7 +1203,6 @@ Future directions include:
     {
       id: 4,
       image: "project_1.jpeg",
-      publications: [],
       slug: "llm-preprocessing-pipeline",
       title: "Real-Time American Sign Language Interpreter: CNN-Based Finger Motion Capture",
       date: "2022-09-19",
